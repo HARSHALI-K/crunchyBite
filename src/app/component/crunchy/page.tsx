@@ -1,3 +1,4 @@
+"use client"
 import React, { useState, useRef } from 'react';
 import { Button } from '@mui/material';
 import Pizza from '../pages/pizza/page';
@@ -19,9 +20,10 @@ const transitionDelay = 200; // Delay before updating index in milliseconds
 const MyCarousel = () => {
     const [index, setIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-    const timeoutRef = useRef(null);
 
-    const handleSlideChange = (newIndex) => {
+    const timeoutRef: React.MutableRefObject<number | undefined> = useRef();
+
+    const handleSlideChange = (newIndex: any) => {
         if (isTransitioning) return;
         setIsTransitioning(true);
         clearTimeout(timeoutRef.current);
@@ -30,8 +32,9 @@ const MyCarousel = () => {
             setIsTransitioning(false);
         }, transitionDelay);
     };
+    
 
-    const handleWheel = (event) => {
+    const handleWheel = (event:any) => {
         const delta = Math.sign(event.deltaY);
         const newIndex = (index - delta + components.length) % components.length; // Update index based on scroll direction
         handleSlideChange(newIndex);
