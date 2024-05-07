@@ -20,7 +20,6 @@ const transitionDelay = 200; // Delay before updating index in milliseconds
 const MyCarousel = () => {
     const [index, setIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
-
     const timeoutRef: React.MutableRefObject<number | undefined> = useRef();
 
     const handleSlideChange = (newIndex: any) => {
