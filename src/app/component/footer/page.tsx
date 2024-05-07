@@ -15,7 +15,6 @@ import { Button, Grid } from '@mui/material';
 const navItems = ['Home', 'Our Products','Media','About','Contact Us'];
 const navlinks = ['Privacy Policy', 'Disclaimer','@ Crunchy Bite - All rights reserved',];
 
-
 export default function FixedBottomNavigation() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef<HTMLDivElement>(null);
