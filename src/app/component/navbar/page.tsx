@@ -14,19 +14,12 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-}
+
 
 const drawerWidth = 240;
 const navItems = ['Home', 'Our Snacks', 'Media','About','Contact Us'];
-
-export default function Navbar(props: Props) {
-  const { window } = props;
+export default function Navbar() {
+  // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
@@ -51,7 +44,7 @@ export default function Navbar(props: Props) {
     </Box>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  // const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
     <Box sx={{ backgroundColor:'red',}}>
@@ -84,7 +77,6 @@ mui          </IconButton>
       </AppBar>
       <nav>
         <Drawer
-          container={container}
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
