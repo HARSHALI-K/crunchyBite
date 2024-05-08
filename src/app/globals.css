@@ -101,10 +101,10 @@ a {
   text-decoration: none;
 }
 
-.css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  background-color:transparent;
+/* .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
+  background-color:transparent!important;
   box-shadow: none;
-}
+} */
 @keyframes fadeInUp {
   from {
     opacity: 0;
