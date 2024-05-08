@@ -91,7 +91,7 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                   >
                   <ImageListItem >
                     <img
-                      src="images/CrunchyBite_logo.png"
+                      src="/images/CrunchyBite_logo.png"
                       loading="lazy"
                     />
                   </ImageListItem>
