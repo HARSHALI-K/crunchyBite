@@ -83,19 +83,11 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                   </ImageListItem>
             <img src="images/CrunchyBite_logo.png" alt="" />
           </Typography> */}
-          <Typography
-                  variant="h6"
-                  noWrap
-                  component="a"
-                  href="#app-bar-with-responsive-menu"
-                  >
-                  <ImageListItem >
+       
                     <img
-                      src="/images/CrunchyBite_logo.png"
+                      src="/images/crunchybite_logo..png"
                       loading="lazy"
                     />
-                  </ImageListItem>
-                </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
               <Button key={item} sx={{ color: 'black',paddingRight:"40px",textTransform:"inherit",fontSize:'18px',fontFamily:"Mali" }}>
