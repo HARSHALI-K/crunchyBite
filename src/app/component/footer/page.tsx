@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import * as React from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -44,7 +44,7 @@ export default function FixedBottomNavigation() {
               display: "flex",
               justifyContent: "space-between",
               alignItems: "center",
-              fontFamily: "Quicksand",
+              fontFamily: "Mali",
             }}
           >
             <Grid item md={4}>
@@ -67,16 +67,33 @@ export default function FixedBottomNavigation() {
                 className="social-icons"
                 style={{ display: "flex", justifyContent: "center" }}
               >
-                <a href="#">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-facebook-f"></i>
                 </a>
-                <a href="#">
+
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-twitter"></i>
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-instagram"></i>
                 </a>
-                <a href="#">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fab fa-linkedin-in"></i>
                 </a>
               </div>
@@ -90,7 +107,7 @@ export default function FixedBottomNavigation() {
                     paddingRight: "10px",
                     textTransform: "inherit",
                     fontSize: "14px",
-                    fontFamily: "Quicksand",
+                    fontFamily: "Mali",
                   }}
                 >
                   {item}
