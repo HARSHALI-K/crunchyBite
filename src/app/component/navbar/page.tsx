@@ -85,7 +85,7 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
           </Typography> */}
        
                     <img
-                      src="/images/crunchybite_logo.png"
+                      src="/images/crunchybite-logo.png"
                       loading="lazy"
                     />
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
