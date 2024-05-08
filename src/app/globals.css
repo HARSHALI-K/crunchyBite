@@ -81,8 +81,73 @@ a {
   align-items: center;
   color: white;
 }
-/* .css-11b3ww9-MuiPaper-root-MuiAppBar-root {
-  background-color:transparent!important;
-  box-shadow: none;
-} */
+.sticker{
+  position: absolute;
+  left: 120px;
+  bottom: 260px;
+}
+.pouch{
+  position: absolute;
+  right: 210px;
+  bottom: 90px;
+}
+.pouch-width{
+  width: 80%;
+}
+.sticker-width{
+  width: 80%;
 
+}
+.content-pizza{
+  position: absolute;
+  right:50px ;
+  bottom:-91px ;
+}
+.content{
+  position: absolute;
+  right:72px ;
+  bottom:-91px ;
+}
+.content-width{  
+  width: 90%;
+}
+.height-main{
+  height: 100vh;
+}
+@media only screen and (max-width: 600px) {
+  .pouch{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 60px;
+  }
+  .sticker{
+    position: absolute;
+    top: -170px;
+    left: 0px;
+    bottom: 0px;
+  }
+  .pouch-width{
+    width: 230px;
+  }
+  .sticker-width{
+    width: 70%;
+  
+  }
+  .content{
+    position: absolute;
+    right:0px ;
+    top: 200px;
+  }
+  .content-width{
+    width: 60%;
+  }
+  .height-main{
+    height: 90vh;
+  }
+  .content-pizza{
+    position: absolute;
+    right:0px ;
+    top:175px ;
+  }
+  }
