@@ -41,17 +41,17 @@ const Pizza = () => {
               item
               xs={12}
               sm={6}
-              sx={{ position: "absolute", bottom: "250px", left: "120px" }}
+              className='sticker'
             >
               <motion.img
-                style={{ width: "80%" }}
-                src="/images/pizza-sticker.png"
+              className='sticker-width'
+              src="/images/pizza-sticker.png"
                 alt=""
                 initial={{ opacity: 0, y: -500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
               />
-              <Box sx={{ position: "absolute", right: "50px", bottom: "-91px" }}>
+              <Box className='content-pizza' >
                 <motion.img style={{ width: "90%" }} src="/images/pizza-content.png" alt=""
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
@@ -86,11 +86,11 @@ const Pizza = () => {
               item
               xs={12}
               sm={6}
-              sx={{ position: "absolute", right: "210px", bottom: "50px" }}
+              className='pouch'
             >
               <motion.img
-                style={{ width: "90%" }}
-                src="/images/Pizza.png"
+              className='pouch-width'
+              src="/images/Pizza.png"
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5, ease: "easeOut" }}
