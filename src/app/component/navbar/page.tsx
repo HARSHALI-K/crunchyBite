@@ -13,6 +13,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { ImageListItem } from '@mui/material';
 
 
 
@@ -49,21 +50,35 @@ export default function Navbar() {
   return (
     <Box sx={{ backgroundColor:'red',}}>
       <CssBaseline />
-      <AppBar component="nav" >
-        <Toolbar sx={{background:'transparent',width:"90%",margin:'auto',paddingTop:"10px"}}>
-          <IconButton
-            color="inherit"
+      <AppBar component="nav" sx={{backgroundColor:'transparent',boxShadow:'none'}}>
+
+      <Toolbar sx={{ 
+  width: "90%", 
+  margin: 'auto', 
+  paddingTop: "10px",
+
+}}>
+ 
+          {/* <IconButton
+            color="inherit" background-color:transparent;
+  box-shadow: none;
+}
             aria-label="open dra6er"
             edge="start"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
-mui          </IconButton>
+mui          </IconButton> */}
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
+             {/* <ImageListItem >
+                    <img
+src="images/CrunchyBite_logo.png"                      loading="lazy"
+                    />
+                  </ImageListItem> */}
             <img src="images/CrunchyBite_logo.png" alt="" />
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -81,7 +96,7 @@ mui          </IconButton>
           open={mobileOpen}
           onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Better open performance on mobile.
+            keepMounted: true, 
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
