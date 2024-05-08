@@ -56,6 +56,8 @@ export default function Navbar() {
   width: "90%", 
   margin: 'auto', 
   paddingTop: "10px",
+  display:'flex',
+  justifyContent:"space-between"
 
 }}>
  
@@ -69,21 +71,41 @@ export default function Navbar() {
             sx={{ mr: 2, display: { sm: 'none' } }}
           >
 mui          </IconButton> */}
-          <Typography
+          {/* <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-             {/* <ImageListItem >
+             <ImageListItem >
                     <img
 src="images/CrunchyBite_logo.png"                      loading="lazy"
                     />
-                  </ImageListItem> */}
+                  </ImageListItem>
             <img src="images/CrunchyBite_logo.png" alt="" />
-          </Typography>
+          </Typography> */}
+          <Typography
+                  variant="h6"
+                  noWrap
+                  component="a"
+                  href="#app-bar-with-responsive-menu"
+                  sx={{
+                    mr: 2,
+                    fontFamily: 'Mali',
+                    fontWeight: 700,
+                    letterSpacing: '.3rem',
+                    color: 'inherit',
+                    textDecoration: 'none',
+                  }} >
+                  <ImageListItem >
+                    <img
+                      src="images/CrunchyBite_logo.png"
+                      loading="lazy"
+                    />
+                  </ImageListItem>
+                </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'black',paddingRight:"40px",textTransform:"inherit",fontSize:'18px',fontFamily:"Quicksand" }}>
+              <Button key={item} sx={{ color: 'black',paddingRight:"40px",textTransform:"inherit",fontSize:'18px',fontFamily:"Mali" }}>
                 {item}
               </Button>
             ))}
