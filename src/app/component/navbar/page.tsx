@@ -88,14 +88,7 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                   noWrap
                   component="a"
                   href="#app-bar-with-responsive-menu"
-                  sx={{
-                    mr: 2,
-                    fontFamily: 'Mali',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: 'inherit',
-                    textDecoration: 'none',
-                  }} >
+                  >
                   <ImageListItem >
                     <img
                       src="images/CrunchyBite_logo.png"
