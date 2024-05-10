@@ -132,7 +132,7 @@ console.log('Home')
   return (
     <Box sx={{ backgroundColor:'red',}}>
       <CssBaseline />
-      <AppBar component="nav" sx={{backgroundColor:'transparent',boxShadow:'none'}}>
+      <AppBar component="nav" sx={{backgroundColor:'white',}}>
 
       <Toolbar sx={{ 
   width: "90%", 
@@ -188,6 +188,7 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                   textTransform: 'inherit',
                   fontSize: '18px',
                   fontFamily: 'Mali',
+                  paddingRight:'10px'
                 }}
               >
                 {item}

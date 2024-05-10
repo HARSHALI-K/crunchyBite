@@ -24,9 +24,9 @@ export default function FixedBottomNavigation() {
   const ref = React.useRef<HTMLDivElement>(null);
 
   return (
-    <Box sx={{ pb: 7 }} ref={ref}>
+    <Box sx={{  }} ref={ref}>
       <Paper
-        sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}
+        sx={{ position: "fixed", bottom: 0, left: 0, right: 0, }}
         elevation={3}
       >
         <BottomNavigation
@@ -35,19 +35,20 @@ export default function FixedBottomNavigation() {
           onChange={(event, newValue) => {
             setValue(newValue);
           }}
-          sx={{ backgroundColor: "#191919" }}
+          sx={{ backgroundColor: "#191919" ,}}
+          className="footer-height"
         >
           <Grid
             container
             spacing={2}
             sx={{
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: {md:"space-between",xs:'center'},
               alignItems: "center",
               fontFamily: "Mali",
             }}
           >
-            <Grid item md={4}>
+            <Grid item md={4} sx={{display:{xs:"none",md:'flex'}}}>
               {navItems.map((item) => (
                 <Button
                   key={item}
@@ -62,7 +63,7 @@ export default function FixedBottomNavigation() {
                 </Button>
               ))}
             </Grid>
-            <Grid item md={4} sx={{ textAlign: "center" }}>
+            <Grid item xs={12} md={4} sx={{ textAlign: "center",paddingTop:"0px"  ,order:{xs:'2',md:'2'}}}>
               <div
                 className="social-icons"
                 style={{ display: "flex", justifyContent: "center" }}
@@ -98,7 +99,7 @@ export default function FixedBottomNavigation() {
                 </a>
               </div>
             </Grid>
-            <Grid item md={4}>
+            <Grid item xs={12} md={4} sx={{textAlign: "center",order:{xs:'1',md:'3'}}}>
               {navlinks.map((item) => (
                 <Button
                   key={item}
@@ -106,7 +107,7 @@ export default function FixedBottomNavigation() {
                     color: "#ffff",
                     paddingRight: "10px",
                     textTransform: "inherit",
-                    fontSize: "14px",
+                    fontSize: {xs:'12px',md:"14px"},
                     fontFamily: "Mali",
                   }}
                 >

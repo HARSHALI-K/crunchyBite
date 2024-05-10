@@ -11,7 +11,7 @@ import Navbar from '../navbar/page';
 import FixedBottomNavigation from '../footer/page';
 import Lemon from '../pages/lemon/page';
 import { motion } from 'framer-motion';
-
+import { useSearchParams  } from 'next/navigation';
 const components = [<FriedChicken />, <Pizza />, <Barbecue />, <Cheddar />, <Lemon />, <Shishkebab />, <Paprika />]; 
 const colors = ['#000000', '#59A125',  '#000000', '#B39846', '#3EAA06','#930DE5','#5D42FF'];
 
@@ -20,10 +20,20 @@ const transitionDelay = 200; // Delay before updating index in milliseconds
 const debounceDelay = 50; // Delay before handling scroll stop
 
 const MyCarousel = () => {
-    const [index, setIndex] = useState(0);
     const [isTransitioning, setIsTransitioning] = useState(false);
     const scrollRef = useRef(null);
     let scrollTimeout = useRef(null);
+    const position = window !== undefined && localStorage.getItem('position')
+    console.log({position})
+    const [index, setIndex] = useState(Number(position));
+
+    const searchParams = useSearchParams()
+
+    const indexValue = searchParams.get('index')
+
+    useEffect(() => {
+        setIndex(Number(indexValue));
+    },[indexValue])
     useEffect(() => {
         const handleWheel = (event) => {
             const delta = Math.sign(event.deltaY);
@@ -123,7 +133,6 @@ const MyCarousel = () => {
             window.removeEventListener('keydown', handleKeyDown);
         };
     }, [index]);
-
     const handleSlideChange = (newIndex) => {
         console.log('hello scroll up');
         if (isTransitioning) return;
@@ -134,7 +143,6 @@ const MyCarousel = () => {
         }, transitionDelay);
     };
     const handleScrollDown = () => {
-        // console.log('hello scroll down');
         if (index < components.length - 1) {
             handleSlideChange(index + 1);
         }
@@ -170,7 +178,7 @@ const MyCarousel = () => {
                             y: [-5, 0, -5],
                             transition: { duration: 2.1, repeat: Infinity },
                         }} />
-                        <span>Scroll Down</span>
+                        <span style={{color:"white"}}>Scroll Down</span>
                     </div>
                 )}
 
