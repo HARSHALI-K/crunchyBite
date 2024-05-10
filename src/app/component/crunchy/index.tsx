@@ -23,9 +23,7 @@ const MyCarousel = () => {
     const [isTransitioning, setIsTransitioning] = useState(false);
     const scrollRef = useRef(null);
     let scrollTimeout = useRef(null);
-    const position = window !== undefined && localStorage.getItem('position')
-    console.log({position})
-    const [index, setIndex] = useState(Number(position));
+    const [index, setIndex] = useState(0);
 
     const searchParams = useSearchParams()
 

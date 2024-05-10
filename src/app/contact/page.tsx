@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import React, { useState } from "react";
 import NavbarBG from "../component/navbar-bg/page";
 import FixedBottomNavigation from "../component/footer/page";
-import RHFInput from "../component/RHFInput/page";
+import RHFInput from "../component/RHFInput";
 import * as yup from "yup";
 import {yupResolver} from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
