@@ -12,6 +12,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Avatar from "@mui/material/Avatar";
 import { Button, Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
+import '@fortawesome/fontawesome-free/css/all.css'
 
 const navItems = ["Home", "Our Snacks", "About",'Testimonial' ,"Contact Us"];
 const navlinks = [
@@ -41,7 +42,7 @@ export default function FixedBottomNavigation() {
     }
   }
 
-  
+
   return (
     <Box sx={{  }} ref={ref}>
       <Paper

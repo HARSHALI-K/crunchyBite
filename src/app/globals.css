@@ -100,7 +100,7 @@ a {
   width: 80%;
 }
 .sticker-width{
-  width: 80%;
+  width: 83%;
 
 }
 .content-pizza{
@@ -139,7 +139,7 @@ a {
   position: absolute;
   left: 0px;
   right:0px;
-  top: -170px;
+  top: -45%;
 }
 .about-box{
   position: absolute;
@@ -160,7 +160,7 @@ a {
   width: 14%;
 }
 .testimonial-content{
-  width: 31%;
+  width: 40%;
 }
 .testimonial-width{
   width: 45%;
@@ -168,8 +168,12 @@ a {
   margin: auto;
 }
 .about-width{
-  width: 18%;
+  width: 23%;
 }
+.dropdown-container:hover .dropdown-menu {
+  display: block;
+}
+
 @media only screen and (max-width: 600px) {
   .pouch{
     position: absolute;
@@ -256,9 +260,31 @@ a {
     position: absolute;
     left: 0px;
     right:0px;
-    top: -33%;
+    top: -43%;
   }
   .testimonial-width{
     width: 100%;
   }
+}
+@media only screen and (max-width: 1400px) and (min-height: 900px) {
+  .pouch{
+    position: absolute;
+    right: 210px;
+    bottom: 50%;
+  }
+  .sticker{
+    position: absolute;
+    left: 120px;
+    bottom: 73%;
+  }
+  .sticker-barbucue {
+    position: absolute;
+    left: 62px;
+    bottom: 73%;
+}
+.sticker-shish {
+  position: absolute;
+  left: 120px;
+  bottom: 65%;
+}
 }

@@ -246,7 +246,7 @@ const onSubmit = async (data) => {
           }}
         >
        <Box >
-           <Grid container  className='contact'   sx={{ height:{xs:'70vh',md:'auto'},overflow: 'auto',
+           <Grid container  className='contact' sx={{ height:{xs:'70vh',md:'auto'},overflow: 'auto',
                 background: "#99f1eb87 ",
                 p:{xs:4,md:4},pb:8}}>
                    <Grid xs={12} item>

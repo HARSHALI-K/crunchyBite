@@ -16,8 +16,8 @@ const Testimonial = () => {
           positiom: "relative",
         }}
       >
-        <Navbar />
-        <Box
+        <NavbarBG />
+        {/* <Box
           sx={{
             display: { xs: "none", md: "flex" },
             position: "absolute",
@@ -35,7 +35,7 @@ const Testimonial = () => {
               transition: { duration: 3.1, repeat: Infinity },
             }}
           />
-        </Box>
+        </Box> */}
         <Box
           sx={{
             display: { xs: "flex", md: "none" },
@@ -79,7 +79,7 @@ const Testimonial = () => {
             }}
           >
             <Grid
-              sx={{background:{ xs:'#1f1e249e',md:"#59a125a8"},  p: { xs: 4, md: 8 } ,height:{xs:'64vh',md:'auto'},overflow: 'auto'}}
+              sx={{background:{ xs:'#1f1e249e',md:"#c4fc9c5e "},  p: { xs: 4, md: 8 } ,height:{xs:'64vh',md:'auto'},overflow: 'auto'}}
               item
               xs={12} md={8}
             >
