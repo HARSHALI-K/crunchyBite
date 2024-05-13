@@ -15,9 +15,9 @@ import { useSearchParams  } from 'next/navigation';
 const components = [<FriedChicken />, <Pizza />, <Barbecue />, <Cheddar />, <Lemon />, <Shishkebab />, <Paprika />]; 
 const colors = ['#000000', '#59A125',  '#000000', '#B39846', '#3EAA06','#930DE5','#5D42FF'];
 
-const transitionDuration = 1; // Transition duration in seconds
-const transitionDelay = 200; // Delay before updating index in milliseconds
-const debounceDelay = 50; // Delay before handling scroll stop
+const transitionDuration = 1; 
+const transitionDelay = 200; 
+const debounceDelay = 150; 
 
 const MyCarousel = () => {
     const [isTransitioning, setIsTransitioning] = useState(false);
