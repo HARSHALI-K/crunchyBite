@@ -11,18 +11,35 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItemText from "@mui/material/ListItemText";
 import Avatar from "@mui/material/Avatar";
 import { Button, Grid } from "@mui/material";
+import { useRouter } from "next/navigation";
 
-const navItems = ["Home", "Our Products", "Media", "About", "Contact Us"];
+const navItems = ["Home", "Our Snacks", "About",'Testimonial' ,"Contact Us"];
 const navlinks = [
   "Privacy Policy",
   "Disclaimer",
   "@ Crunchy Bite - All rights reserved",
 ];
 
+
 export default function FixedBottomNavigation() {
   const [value, setValue] = React.useState(0);
   const ref = React.useRef<HTMLDivElement>(null);
-
+ const {push} =useRouter();
+  const handleNavigation = (item)=>{
+    console.log(item)
+    if(item ==='Home'){
+      push('/')
+    }
+    if(item ==='About'){
+      push('/about')
+    }
+    if(item ==='Contact Us'){
+      push('/contact')
+    }
+    if(item ==='Testimonial'){
+      push('/testimonial')
+    }
+  }
   return (
     <Box sx={{  }} ref={ref}>
       <Paper
@@ -52,6 +69,7 @@ export default function FixedBottomNavigation() {
               {navItems.map((item) => (
                 <Button
                   key={item}
+                  onClick={()=>handleNavigation(item)}
                   sx={{
                     color: "#ffff",
                     paddingRight: "10px",
@@ -63,17 +81,17 @@ export default function FixedBottomNavigation() {
                 </Button>
               ))}
             </Grid>
-            <Grid item xs={12} md={4} sx={{ textAlign: "center",paddingTop:"0px"  ,order:{xs:'2',md:'2'}}}>
-              <div
+            <Grid item  md={4} sx={{ textAlign: "center",paddingTop:"0px" ,display:{xs:"none",md:'flex'},justifyContent:'center' ,order:{xs:'2',md:'2'}}}>
+              <Box
                 className="social-icons"
-                style={{ display: "flex", justifyContent: "center" }}
+                style={{ display: "flex", justifyContent: "center",color:'white' }}
               >
                 <a
                   href="https://www.facebook.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-facebook-f"></i>
+                  <i className="fab fa-facebook-f" style={{color:'white'}}></i>
                 </a>
 
                 <a
@@ -81,23 +99,23 @@ export default function FixedBottomNavigation() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-twitter"></i>
+                  <i className="fab fa-twitter" style={{color:'white'}}></i>
                 </a>
                 <a
                   href="https://www.instagram.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-instagram"></i>
+                  <i className="fab fa-instagram" style={{color:'white'}}></i>
                 </a>
                 <a
                   href="https://www.linkedin.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                  <i className="fab fa-linkedin-in" style={{color:'white'}}></i>
                 </a>
-              </div>
+              </Box>
             </Grid>
             <Grid item xs={12} md={4} sx={{textAlign: "center",order:{xs:'1',md:'3'}}}>
               {navlinks.map((item) => (
@@ -105,11 +123,11 @@ export default function FixedBottomNavigation() {
                   key={item}
                   sx={{
                     color: "#ffff",
-                    paddingRight: "10px",
+                    paddingRight: {xs:"2px",md:'10px'},
                     textTransform: "inherit",
                     fontSize: {xs:'12px',md:"14px"},
-                    fontFamily: "Mali",
-                  }}
+                    fontFamily: "Mali", cursor:'pointer',
+                  }} 
                 >
                   {item}
                 </Button>

@@ -18,7 +18,8 @@ import { useRouter } from 'next/navigation';
 
 
 const drawerWidth = 240;
-const navItems = ['Home', 'Our Snacks','About','Contact Us'];
+const navItems = ['Home',   <span key="snacks">Our Snacks <i className="fas fa-angle-down mr:6" style={{marginRight:'15px'}}></i></span>,
+,'About','Testimonial','Contact Us'];
 export default function Navbar() {
   // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -29,6 +30,7 @@ export default function Navbar() {
   const {push}= useRouter()
 
 const handleNavigation = (item)=>{
+  console.log(item)
   if(item ==='Home'){
     push('/')
   }
@@ -37,6 +39,9 @@ const handleNavigation = (item)=>{
   }
   if(item ==='Contact Us'){
     push('/contact')
+  }
+  if(item ==='Testimonial'){
+    push('/testimonial')
   }
  
 }
@@ -66,28 +71,26 @@ console.log('Home')
 
   const handleItemClick = (item) => {
     console.log(`Clicked on ${item}`);
-    // Implement your logic when an item is clicked
     setAnchorEl(null); // Close the dropdown
   };
   const drawer = (
     <Box  sx={{ textAlign: 'center' }}>
-       <Box sx={{display:'flex',justifyContent:'space-between',p:3,alignItems:'center'}}> <img
+       <Box sx={{display:'flex',justifyContent:'space-between',p:3,alignItems:'center'}}>
+       <Box onClick={()=> push('/')} sx={{cursor:'pointer',}}>
+         <img
                       src="/images/CrunchyBite-logo.png"
                       loading="lazy"
-                      style={{width:'30%'}}
-                      
-                    />
+                     
+                    /></Box>
                     <Box onClick={handleDrawerToggleclose} sx={{fontSize:"20px"}}>
                     <i className="fas fa-times"></i>
-
                     </Box>
-
                     </Box>
       <List>
       {navItems.map((item) => (
         <ListItem key={item} disablePadding>
-          {item === 'Our Snacks' ? (
-            <div>
+          {typeof item === 'object' ? (
+            <Box sx={{display: { xs: 'flex', sm: 'none' }}}>
               <ListItemButton
                 sx={{ textAlign: 'center', textTransform: 'inherits', paddingRight: '10px' }}
                 onClick={handleMenuOpen}
@@ -106,16 +109,17 @@ console.log('Home')
                   vertical: 'top',
                   horizontal: 'center',
                 }}
+                sx={{display: { xs: 'flex', sm: 'none' }}}
               >
-                <MenuItem onClick={() => push(`?index=1`)}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=> push(`?index=2`)}>Pizza</MenuItem>
-                <MenuItem onClick={()=> push(`?index=3`)}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> push(`?index=4`)}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=> push(`?index=5`)}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=> push(`?index=6`)}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=> push(`?index=7`)}>Paprika</MenuItem>              
+                <MenuItem onClick={() => {push(`?index=0`); handleMenuClose(); handleDrawerToggleclose()}}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=1`); handleMenuClose(); handleDrawerToggleclose()}}>Pizza</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=2`); handleMenuClose(); handleDrawerToggleclose()}}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=3`); handleMenuClose(); handleDrawerToggleclose()}}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=4`); handleMenuClose(); handleDrawerToggleclose()}}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=5`); handleMenuClose(); handleDrawerToggleclose()}}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=>{push(`?index=6`); handleMenuClose(); handleDrawerToggleclose()}}>Paprika</MenuItem>              
                 </Menu>
-            </div>
+            </Box>
           ) : (
             <ListItemButton sx={{ textAlign: 'start', textTransform: 'inherits', paddingRight: '10px' }} onClick={()=>handleNavigation(item)}>
               <ListItemText primary={item} />
@@ -140,45 +144,22 @@ console.log('Home')
   paddingTop: "10px",
   display:'flex',
   justifyContent:"space-between"
-
 }}>
- 
-          {/* <IconButton
-            color="inherit" background-color:transparent;
-  box-shadow: none;
-}
-            aria-label="open dra6er"
-            edge="start"
-            onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: 'none' } }}
-          >
-mui          </IconButton> */}
-          {/* <Typography
-            variant="h6"
-            component="Box"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-             <ImageListItem >
-                    <img
-src="images/CrunchyBite_logo.png"                      loading="lazy"
-                    />
-                  </ImageListItem>
-            <img src="images/CrunchyBite_logo.png" alt="" />
-          </Typography> */}
-       
+         <Box onClick={()=> push('/')} sx={{cursor:'pointer'}}>
                     <img
                       src="/images/CrunchyBite-logo.png"
                       loading="lazy"
                       
                     />
+                    </Box>
                     <Box sx={{color:'black',fontSize:"20px",display:{xs:'flex',md:'none'} }}  onClick={handleDrawerToggle}>                  
                     <i className="fas fa-bars "></i>
                           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-        <div key={item} style={{ display: 'inline-block' }}>
-          {item === 'Our Snacks' ? (
-            <div>
+        <Box key={item} style={{ display: 'inline-block' }}>
+          {typeof item === 'object' ? (
+            <Box>
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
@@ -199,15 +180,15 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                  <MenuItem onClick={()=>  push(`?index=1`)}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=2`)}>Pizza</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=3`)}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> push(`?index=4`)}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=5`)}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=6`)}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=>  push(`?index=7`)}>Paprika</MenuItem>    
+                  <MenuItem onClick={()=>  {push(`?index=0`); handleClose()}}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=>  {push(`?index=1`); handleClose()}}>Pizza</MenuItem>
+                <MenuItem onClick={()=>  {push(`?index=2`); handleClose()}}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> {push(`?index=3`); handleClose()}}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=>  {push(`?index=4`); handleClose()}}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=>  {push(`?index=5`); handleClose()}}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=>  {push(`?index=6`); handleClose()}}>Paprika</MenuItem>    
               </Menu>
-            </div>
+            </Box>
           ) : (
             <Button
             onClick={()=>handleNavigation(item)}
@@ -216,7 +197,7 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
               {item}
             </Button>
           )}
-        </div>
+        </Box>
       ))}
 
           </Box>

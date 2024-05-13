@@ -25,11 +25,12 @@ export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
+    
   };
   const {push}= useRouter()
 
 const handleNavigation = (item)=>{
-  if(item ==='Home'){
+  if(item ==='Home' || item === 'Our Snacks'){
     push('/')
   }
   if(item ==='About'){
@@ -89,7 +90,7 @@ console.log('Home')
           {item === 'Our Snacks' ? (
             <div>
               <ListItemButton
-                sx={{ textAlign: 'center', textTransform: 'inherits', paddingRight: '10px' }}
+                sx={{ textAlign: 'center', textTransform: 'inherits',  }}
                 onClick={handleMenuOpen}
               >
                 <ListItemText primary={item} />
@@ -107,13 +108,13 @@ console.log('Home')
                   horizontal: 'center',
                 }}
               >
-                <MenuItem onClick={() => push(`?index=1`)}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=> push(`?index=2`)}>Pizza</MenuItem>
-                <MenuItem onClick={()=> push(`?index=3`)}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> push(`?index=4`)}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=> push(`?index=5`)}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=> push(`?index=6`)}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=> push(`?index=7`)}>Paprika</MenuItem>              
+                <MenuItem onClick={() => push(`/?index=0`)}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=1`)}>Pizza</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=2`)}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=3`)}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=4`)}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=5`)}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=> push(`/?index=6`)}>Paprika</MenuItem>              
                 </Menu>
             </div>
           ) : (
@@ -127,12 +128,10 @@ console.log('Home')
     </Box>
   );
 
-  // const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ backgroundColor:'red',}}>
       <CssBaseline />
-      <AppBar component="nav" sx={{backgroundColor:'white',}}>
+      <AppBar component="nav" sx={{backgroundColor:'white'}}>
 
       <Toolbar sx={{ 
   width: "90%", 
@@ -200,13 +199,13 @@ src="images/CrunchyBite_logo.png"                      loading="lazy"
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                  <MenuItem onClick={()=>  push(`?index=1`)}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=2`)}>Pizza</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=3`)}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> push(`?index=4`)}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=5`)}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=>  push(`?index=6`)}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=>  push(`?index=7`)}>Paprika</MenuItem>    
+                  <MenuItem onClick={()=>  push(`/?index=0`)}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=1`)}>Pizza</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=2`)}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=3`)}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=4`)}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=5`)}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=>  push(`/?index=6`)}>Paprika</MenuItem>    
               </Menu>
             </div>
           ) : (

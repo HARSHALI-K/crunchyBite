@@ -70,16 +70,16 @@ a {
 }
 
 .social-icons i {
-  font-size: 14px; /* Adjust icon size as needed */
-  border: 2px solid white; /* Border color */
-  border-radius: 50%; /* Makes it circular */
-  padding: 6px; /* Adjust padding as needed */
-  width: 26px; /* Equal width and height */
-  height: 26px; /* Equal width and height */
+  font-size: 14px; 
+  border: 2px solid white; 
+  border-radius: 50%; 
+  padding: 6px; 
+  width: 26px; 
+  height: 26px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: white!important;
 }
 .sticker{
   position: absolute;
@@ -119,6 +119,11 @@ a {
   right:72px ;
   bottom:-91px ;
 }
+.content-bus{
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
 .content-width{  
   width: 90%;
 }
@@ -129,6 +134,12 @@ a {
   position: absolute;
   left: 120px;
   bottom: 210px;
+}
+.contact{
+  position: absolute;
+  left: 0px;
+  right:0px;
+  top: -170px;
 }
 .about-box{
   position: absolute;
@@ -145,16 +156,30 @@ a {
 .pasta-width{
   width: 100%;
 }
+.contact-content{
+  width: 14%;
+}
+.testimonial-content{
+  width: 31%;
+}
+.testimonial-width{
+  width: 45%;
+  display: flex;
+  margin: auto;
+}
+.about-width{
+  width: 18%;
+}
 @media only screen and (max-width: 600px) {
   .pouch{
     position: absolute;
     left: 0px;
     right: 0px;
-    bottom: 60px;
+    bottom: 15%;
   }
   .sticker{
     position: absolute;
-    top: -170px;
+    top: -37%;
     left: 0px;
     bottom: 0px;
   }
@@ -177,11 +202,10 @@ a {
     top: -170px;
     }
   .pouch-width{
-    width: 230px;
+    width: 220px;
   }
   .sticker-width{
     width: 70%;
-  
   }
   .ring-width{
     width: 40%;
@@ -189,7 +213,7 @@ a {
   .content{
     position: absolute;
     right:0px ;
-    top: 200px;
+    top: 30%;
   }
   .content-width{
     width: 60%;
@@ -200,12 +224,12 @@ a {
   .content-pizza{
     position: absolute;
     right:0px ;
-    top:175px ;
+    top:31% ;
   }
   .content-chaddar{
     position: absolute;
     right:0px ;
-    top:220px ;
+    top:33% ;
   }
   .pizza1-width{
     width: 29%;
@@ -218,5 +242,23 @@ a {
   }
   .footer-height{
     height: 10vh;
+  }
+  .contact-content{
+    width: 45%;
+  }
+  .testimonial-content{
+    width: 60%;
+  }
+  .about-width{
+    width: 45%;
+  }
+  .contact{
+    position: absolute;
+    left: 0px;
+    right:0px;
+    top: -33%;
+  }
+  .testimonial-width{
+    width: 100%;
   }
 }
