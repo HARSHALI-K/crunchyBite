@@ -18,20 +18,19 @@ import { useRouter } from 'next/navigation';
 
 
 const drawerWidth = 240;
-const navItems = ['Home',   <span key="snacks">Our Snacks <i className="fas fa-angle-down mr:6" style={{marginRight:'15px'}}></i></span>,
-,'About','Testimonial','Contact Us'];
+const navItems = ['Home', 'Our Snacks','About','Contact Us'];
 export default function Navbar() {
   // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenuOpen = (event: React.MouseEvent<HTMLButtonElement>) => {
     setAnchorEl(event.currentTarget);
+    
   };
   const {push}= useRouter()
 
 const handleNavigation = (item)=>{
-  console.log(item)
-  if(item ==='Home'){
+  if(item ==='Home' || item === 'Our Snacks'){
     push('/')
   }
   if(item ==='About'){
@@ -39,9 +38,6 @@ const handleNavigation = (item)=>{
   }
   if(item ==='Contact Us'){
     push('/contact')
-  }
-  if(item ==='Testimonial'){
-    push('/testimonial')
   }
  
 }
@@ -71,28 +67,30 @@ console.log('Home')
 
   const handleItemClick = (item) => {
     console.log(`Clicked on ${item}`);
+    // Implement your logic when an item is clicked
     setAnchorEl(null); // Close the dropdown
   };
   const drawer = (
     <Box  sx={{ textAlign: 'center' }}>
-       <Box sx={{display:'flex',justifyContent:'space-between',p:3,alignItems:'center'}}>
-       <Box onClick={()=> push('/')} sx={{cursor:'pointer',}}>
-         <img
+       <Box sx={{display:'flex',justifyContent:'space-between',p:3,alignItems:'center'}}> <img
                       src="/images/CrunchyBite-logo.png"
                       loading="lazy"
-                     
-                    /></Box>
+                      style={{width:'30%'}}
+                      
+                    />
                     <Box onClick={handleDrawerToggleclose} sx={{fontSize:"20px"}}>
                     <i className="fas fa-times"></i>
+
                     </Box>
+
                     </Box>
       <List>
       {navItems.map((item) => (
         <ListItem key={item} disablePadding>
-          {typeof item === 'object' ? (
-            <Box sx={{display: { xs: 'flex', sm: 'none' }}}>
+          {item === 'Our Snacks' ? (
+            <div>
               <ListItemButton
-                sx={{ textAlign: 'center', textTransform: 'inherits', paddingRight: '10px' }}
+                sx={{ textAlign: 'center', textTransform: 'inherits',  }}
                 onClick={handleMenuOpen}
               >
                 <ListItemText primary={item} />
@@ -109,17 +107,16 @@ console.log('Home')
                   vertical: 'top',
                   horizontal: 'center',
                 }}
-                sx={{display: { xs: 'flex', sm: 'none' }}}
               >
-                <MenuItem onClick={() => {push(`?index=0`); handleMenuClose(); handleDrawerToggleclose()}}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=1`); handleMenuClose(); handleDrawerToggleclose()}}>Pizza</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=2`); handleMenuClose(); handleDrawerToggleclose()}}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=3`); handleMenuClose(); handleDrawerToggleclose()}}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=4`); handleMenuClose(); handleDrawerToggleclose()}}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=5`); handleMenuClose(); handleDrawerToggleclose()}}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=>{push(`?index=6`); handleMenuClose(); handleDrawerToggleclose()}}>Paprika</MenuItem>              
+                <MenuItem onClick={() => push(`/?index=0`)}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=1`)}>Pizza</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=2`)}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=3`)}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=4`)}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=5`)}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=> push(`/?index=6`)}>Paprika</MenuItem>              
                 </Menu>
-            </Box>
+            </div>
           ) : (
             <ListItemButton sx={{ textAlign: 'start', textTransform: 'inherits', paddingRight: '10px' }} onClick={()=>handleNavigation(item)}>
               <ListItemText primary={item} />
@@ -131,12 +128,10 @@ console.log('Home')
     </Box>
   );
 
-  // const container = window !== undefined ? () => window().document.body : undefined;
-
   return (
     <Box sx={{ backgroundColor:'red',}}>
       <CssBaseline />
-      <AppBar component="nav" sx={{backgroundColor:'transparent',boxShadow:'none'}}>
+      <AppBar component="nav" sx={{backgroundColor:'white'}}>
 
       <Toolbar sx={{ 
   width: "90%", 
@@ -144,22 +139,45 @@ console.log('Home')
   paddingTop: "10px",
   display:'flex',
   justifyContent:"space-between"
+
 }}>
-         <Box onClick={()=> push('/')} sx={{cursor:'pointer'}}>
+ 
+          {/* <IconButton
+            color="inherit" background-color:transparent;
+  box-shadow: none;
+}
+            aria-label="open dra6er"
+            edge="start"
+            onClick={handleDrawerToggle}
+            sx={{ mr: 2, display: { sm: 'none' } }}
+          >
+mui          </IconButton> */}
+          {/* <Typography
+            variant="h6"
+            component="Box"
+            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+          >
+             <ImageListItem >
+                    <img
+src="images/CrunchyBite_logo.png"                      loading="lazy"
+                    />
+                  </ImageListItem>
+            <img src="images/CrunchyBite_logo.png" alt="" />
+          </Typography> */}
+       
                     <img
                       src="/images/CrunchyBite-logo.png"
                       loading="lazy"
                       
                     />
-                    </Box>
                     <Box sx={{color:'black',fontSize:"20px",display:{xs:'flex',md:'none'} }}  onClick={handleDrawerToggle}>                  
                     <i className="fas fa-bars "></i>
                           </Box>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
           {navItems.map((item) => (
-        <Box key={item} style={{ display: 'inline-block' }}>
-          {typeof item === 'object' ? (
-            <Box>
+        <div key={item} style={{ display: 'inline-block' }}>
+          {item === 'Our Snacks' ? (
+            <div>
               <Button
                 aria-controls="simple-menu"
                 aria-haspopup="true"
@@ -169,6 +187,7 @@ console.log('Home')
                   textTransform: 'inherit',
                   fontSize: '18px',
                   fontFamily: 'Mali',
+                  paddingRight:'10px'
                 }}
               >
                 {item}
@@ -180,15 +199,15 @@ console.log('Home')
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                  <MenuItem onClick={()=>  {push(`?index=0`); handleClose()}}>Fried Chicken</MenuItem>
-                <MenuItem onClick={()=>  {push(`?index=1`); handleClose()}}>Pizza</MenuItem>
-                <MenuItem onClick={()=>  {push(`?index=2`); handleClose()}}>Barbecue</MenuItem>
-                <MenuItem onClick={()=> {push(`?index=3`); handleClose()}}>White Cheddar</MenuItem>
-                <MenuItem onClick={()=>  {push(`?index=4`); handleClose()}}>Chilli & Lemon</MenuItem>
-                <MenuItem onClick={()=>  {push(`?index=5`); handleClose()}}>Shish Kebab</MenuItem> 
-                <MenuItem onClick={()=>  {push(`?index=6`); handleClose()}}>Paprika</MenuItem>    
+                  <MenuItem onClick={()=>  push(`/?index=0`)}>Fried Chicken</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=1`)}>Pizza</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=2`)}>Barbecue</MenuItem>
+                <MenuItem onClick={()=> push(`/?index=3`)}>White Cheddar</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=4`)}>Chilli & Lemon</MenuItem>
+                <MenuItem onClick={()=>  push(`/?index=5`)}>Shish Kebab</MenuItem> 
+                <MenuItem onClick={()=>  push(`/?index=6`)}>Paprika</MenuItem>    
               </Menu>
-            </Box>
+            </div>
           ) : (
             <Button
             onClick={()=>handleNavigation(item)}
@@ -197,7 +216,7 @@ console.log('Home')
               {item}
             </Button>
           )}
-        </Box>
+        </div>
       ))}
 
           </Box>
