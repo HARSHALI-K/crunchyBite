@@ -127,7 +127,7 @@ export default function Navbar() {
                 >
                   <MenuItem
                     onClick={() => {
-                      push(`?index=0`);
+                      push(`/?index=0`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -136,7 +136,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=1`);
+                      push(`/?index=1`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -145,7 +145,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=2`);
+                      push(`/?index=2`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -154,7 +154,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=3`);
+                      push(`/?index=3`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -163,7 +163,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=4`);
+                      push(`/?index=4`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -172,7 +172,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=5`);
+                      push(`/?index=5`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -181,7 +181,7 @@ export default function Navbar() {
                   </MenuItem>
                   <MenuItem
                     onClick={() => {
-                      push(`?index=6`);
+                      push(`/?index=6`);
                       handleMenuClose();
                       handleDrawerToggleclose();
                     }}
@@ -215,7 +215,7 @@ export default function Navbar() {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "transparent", boxShadow: "none" }}
+        sx={{ backgroundColor: {xs:'transparent',md:"#000000"},boxShadow:{xs:'none'}}}
       >
         <Toolbar
           sx={{
@@ -244,19 +244,26 @@ export default function Navbar() {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Box key={item} style={{ display: "inline-block" }}>
+              <Box key={item} style={{ display: "inline-block", }} onMouseLeave={handleClose}>
                 {typeof item === "object" ? (
-                  <Box>
+                  <Box  onMouseEnter={handleClick}
+                  onMouseLeave={handleClose}
+                  style={{ position: 'relative' }}>
                     <Button
                       aria-controls="simple-menu"
                       aria-haspopup="true"
                       onClick={handleClick}
+                      sx={{color:{ xs:"black",md:'white'},}}
                       style={{
-                        color: "black",
                         textTransform: "inherit",
                         fontSize: "18px",
                         fontFamily: "Mali",
+                        cursor: "pointer"
                       }}
+                      MenuListProps={{
+                        onMouseEnter: handleClick, 
+                        onMouseLeave: handleClose,
+                    }}
                     >
                       {item}
                     </Button>
@@ -266,10 +273,11 @@ export default function Navbar() {
                       keepMounted
                       open={Boolean(anchorEl)}
                       onClose={handleClose}
+                      onMouseLeave={handleClose}
                     >
                       <MenuItem
                         onClick={() => {
-                          push(`?index=0`);
+                          push(`/?index=0`);
                           handleClose();
                         }}
                       >
@@ -277,7 +285,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=1`);
+                          push(`/?index=1`);
                           handleClose();
                         }}
                       >
@@ -285,7 +293,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=2`);
+                          push(`/?index=2`);
                           handleClose();
                         }}
                       >
@@ -293,7 +301,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=3`);
+                          push(`/?index=3`);
                           handleClose();
                         }}
                       >
@@ -301,7 +309,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=4`);
+                          push(`/?index=4`);
                           handleClose();
                         }}
                       >
@@ -309,7 +317,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=5`);
+                          push(`/?index=5`);
                           handleClose();
                         }}
                       >
@@ -317,7 +325,7 @@ export default function Navbar() {
                       </MenuItem>
                       <MenuItem
                         onClick={() => {
-                          push(`?index=6`);
+                          push(`/?index=6`);
                           handleClose();
                         }}
                       >
@@ -329,7 +337,7 @@ export default function Navbar() {
                   <Button
                     onClick={() => handleNavigation(item)}
                     sx={{
-                      color: "black",
+                      color:{ xs:"black",md:'white'},
                       paddingRight: "40px",
                       textTransform: "inherit",
                       fontSize: "18px",

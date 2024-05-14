@@ -158,6 +158,20 @@ const FriedChicken = () => {
                   }}
                 />
               </Box>
+              <Box
+                sx={{ position: "absolute", left: "-10%", bottom: "-90%" }}
+              >
+                   <motion.img 
+  style={{width:"100%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/chicken_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
               <Box sx={{ position: "absolute", right: "0px", bottom: "200px" }}>
                 <motion.img
                   style={{ width: "100%" }}
@@ -221,7 +235,7 @@ const FriedChicken = () => {
                   }}
                 />
               </Box>
-              <Box
+              {/* <Box
                 sx={{ position: "absolute", left: "-51px", bottom: "-40px" }}
               >
                 <motion.img
@@ -233,7 +247,7 @@ const FriedChicken = () => {
                     transition: { duration: 2.1, repeat: Infinity },
                   }}
                 />
-              </Box>
+              </Box> */}
             </Box>
           </Grid>
         </Grid>

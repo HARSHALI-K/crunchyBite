@@ -13,7 +13,7 @@ const Testimonial = () => {
         sx={{
           backgroundColor: "#59A125 ",
           height: "90vh",
-          positiom: "relative",
+          position:"absolute",left:0,right:0,top:0,bottom:0
         }}
       >
         <NavbarBG />
@@ -75,15 +75,23 @@ const Testimonial = () => {
             className="contact"
             sx={{
               p: { xs: 1, md: 4 },
-              display:'flex',justifyContent: 'center',
-            }}
+              height: { xs: '70vh', md: 'auto' },
+              overflow: 'auto',
+              width:"80%",
+              borderRadius:'20px',
+              background:{ xs:'#1f1e249e',md:"#c4fc9c5e "},
+              marginRight: 'auto',
+              marginLeft: 'auto',
+              padding: 3,
+              display: 'flex',
+              justifyContent: 'center', // Centering horizontally and vertically
+                      }}
           >
             <Grid
-              sx={{background:{ xs:'#1f1e249e',md:"#c4fc9c5e "},  p: { xs: 4, md: 8 } ,height:{xs:'64vh',md:'auto'},overflow: 'auto'}}
               item
               xs={12} md={8}
             >
-              <Box sx={{mb:2}}>
+              <Box sx={{mb:2,pt:2}}>
               <img
                 src="/testimonial-content.png"
                 alt=""
@@ -96,7 +104,8 @@ const Testimonial = () => {
                   sx={{
                     color: "white",
                     textAlign: "center",
-                    fontSize: { xs: "12px", md: "16px" },
+                    fontSize: { xs: "14px", md: "20px" },
+                    fontWeight:"bold",
                   }}
                 >
                  “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “

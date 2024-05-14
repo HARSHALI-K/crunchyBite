@@ -122,7 +122,18 @@ const Pizza = () => {
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
-             
+              <Box sx={{ position: "absolute", left: "-10%", bottom: "190px" ,display:{xs:'flex',md:'flex'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/pizza_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
               <Box sx={{ position: "absolute", right: "23px", bottom: "43px" }}>
                 <motion.img style={{ width: "100%" }} src="/images/ring2.png" alt=""  animate={{
                     y: [-10, 0, -10],

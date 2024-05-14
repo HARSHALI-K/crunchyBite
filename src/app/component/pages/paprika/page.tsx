@@ -107,6 +107,18 @@ const Paprika = () => {
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
+              <Box sx={{ position: "absolute", right: "-20%", bottom: "10px" ,display:{xs:'flex',md:'flex'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/paprika_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
               <Box sx={{ position: "absolute", right: "-109px", bottom: "211px" }}>
                 <motion.img style={{ width: "70%" }} src="/images/chilli1.png" alt=""  animate={{
                     y: [-10, 0, -10],

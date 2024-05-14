@@ -128,7 +128,7 @@ export default function FixedBottomNavigation() {
                     color: "#ffff",
                     paddingRight: {xs:"2px",md:'10px'},
                     textTransform: "inherit",
-                    fontSize: {xs:'12px',md:"14px"},
+                    fontSize: {xs:'12px',md:"12px",xl:'14px'},
                     fontFamily: "Mali", cursor:'pointer',
                   }} 
                 >
