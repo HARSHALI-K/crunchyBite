@@ -213,7 +213,7 @@ export default function NavbarBG() {
       <CssBaseline />
       <AppBar
         component="nav"
-        sx={{ backgroundColor: "white",  }}
+        sx={{ backgroundColor: {xs:'transparent',md:"#000000"},boxShadow:{xs:'none'}}}
       >
         <Toolbar
           sx={{
@@ -239,102 +239,110 @@ export default function NavbarBG() {
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             {navItems.map((item) => (
-              <Box key={item} style={{ display: "inline-block" }}>
-                {typeof item === "object" ? (
-                  <Box>
-                    <Button
-                      aria-controls="simple-menu"
-                      aria-haspopup="true"
-                      onClick={handleClick}
-                      style={{
-                        color: "black",
-                        textTransform: "inherit",
-                        fontSize: "18px",
-                        fontFamily: "Mali",
-                      }}
-                    >
-                      {item}
-                    </Button>
-                    <Menu
-                      id="simple-menu"
-                      anchorEl={anchorEl}
-                      keepMounted
-                      open={Boolean(anchorEl)}
-                      onClose={handleClose}
-                    >
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=0`);
-                          handleClose();
-                        }}
-                      >
-                        Fried Chicken
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=1`);
-                          handleClose();
-                        }}
-                      >
-                        Pizza
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=2`);
-                          handleClose();
-                        }}
-                      >
-                        Barbecue
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=3`);
-                          handleClose();
-                        }}
-                      >
-                        White Cheddar
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=4`);
-                          handleClose();
-                        }}
-                      >
-                        Chilli & Lemon
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=5`);
-                          handleClose();
-                        }}
-                      >
-                        Shish Kebab
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=6`);
-                          handleClose();
-                        }}
-                      >
-                        Paprika
-                      </MenuItem>
-                    </Menu>
-                  </Box>
-                ) : (
-                  <Button
-                    onClick={() => handleNavigation(item)}
-                    sx={{
-                      color: "black",
-                      paddingRight: "40px",
-                      textTransform: "inherit",
-                      fontSize: "18px",
-                      fontFamily: "Mali",
-                    }}
-                  >
-                    {item}
-                  </Button>
-                )}
-              </Box>
+             <Box key={item} style={{ display: "inline-block" }} onMouseLeave={handleClose}>
+             {typeof item === "object" ? (
+               <Box  onMouseEnter={handleClick}
+               onMouseLeave={handleClose}
+               style={{ position: 'relative' }}>
+                 <Button
+                   aria-controls="simple-menu"
+                   aria-haspopup="true"
+                   onClick={handleClick}
+                   sx={{color:{ xs:"black",md:'white'},}}
+                   style={{
+                     textTransform: "inherit",
+                     fontSize: "18px",
+                     fontFamily: "Mali",
+                     cursor: "pointer"
+                   }}
+                   MenuListProps={{
+                     onMouseEnter: handleClick, 
+                     onMouseLeave: handleClose,
+                 }}
+                 >
+                   {item}
+                 </Button>
+                 <Menu
+                   id="simple-menu"
+                   anchorEl={anchorEl}
+                   keepMounted
+                   open={Boolean(anchorEl)}
+                   onClose={handleClose}
+                   onMouseLeave={handleClose}
+                 >
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=0`);
+                       handleClose();
+                     }}
+                   >
+                     Fried Chicken
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=1`);
+                       handleClose();
+                     }}
+                   >
+                     Pizza
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=2`);
+                       handleClose();
+                     }}
+                   >
+                     Barbecue
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=3`);
+                       handleClose();
+                     }}
+                   >
+                     White Cheddar
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=4`);
+                       handleClose();
+                     }}
+                   >
+                     Chilli & Lemon
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=5`);
+                       handleClose();
+                     }}
+                   >
+                     Shish Kebab
+                   </MenuItem>
+                   <MenuItem
+                     onClick={() => {
+                       push(`/?index=6`);
+                       handleClose();
+                     }}
+                   >
+                     Paprika
+                   </MenuItem>
+                 </Menu>
+               </Box>
+             ) : (
+               <Button
+                 onClick={() => handleNavigation(item)}
+                 sx={{
+                  color:{ xs:"black",md:'white'},
+                   paddingRight: "40px",
+                   textTransform: "inherit",
+                   fontSize: "18px",
+                   fontFamily: "Mali",
+                 }}
+               >
+                 {item}
+               </Button>
+             )}
+           </Box>
             ))}
           </Box>
         </Toolbar>

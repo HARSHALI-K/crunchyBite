@@ -108,6 +108,56 @@ const Lemon = () => {
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
+              <Box sx={{ position: "absolute", left: "0%", bottom: "150px" ,display:{xs:'flex',md:'none'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/chilly_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
+              <Box sx={{ position: "absolute", right: "0%", bottom: "70px" ,display:{xs:'flex',md:'none'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/lemon_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
+              <Box sx={{ position: "absolute", left: "-57%", bottom: "100px" ,display:{xs:'none',md:'flex'}}}>
+                   <motion.img 
+  style={{width:"100%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/lemon_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
+              <Box
+                sx={{ position: "absolute", right: "-10%", top: "-500px",display:{xs:'none',md:'flex'} }}
+              >
+                   <motion.img 
+  style={{width:"100%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/chilly_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
               <Box sx={{ position: "absolute", right: "-109px", bottom: "-77px" }}>
                 <motion.img className='ring-width' src="/images/lemon1.png" alt=""  animate={{
                     y: [-10, 0, -10],

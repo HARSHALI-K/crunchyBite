@@ -119,6 +119,30 @@ const Shishkebab = () => {
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
+              <Box sx={{ position: "absolute", right: "-20%", bottom: "10px" ,display:{xs:'flex',md:'flex'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/shish_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
+              <Box sx={{ position: "absolute", left: "-0%", bottom: "120px" ,display:{xs:'flex',md:'flex'}}}>
+                   <motion.img 
+  style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
+  src="/images/shish2_logo.png" 
+  alt="" 
+  animate={{
+    x: [10, 0, 10], 
+    y: [15, 0, 15], 
+    transition: { duration: 4.1, repeat: Infinity },
+  }}
+/>
+              </Box>
               <Box sx={{ position: "absolute", right: "-67px", bottom: "-80px" }}>
                 <motion.img style={{ width: "70%" }} src="/images/shish3.png" alt=""  animate={{
                     y: [-10, 0, -10],

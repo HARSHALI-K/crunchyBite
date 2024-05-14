@@ -83,7 +83,7 @@ a {
 }
 .sticker{
   position: absolute;
-  left: 120px;
+  left: 10%;
   bottom: 260px;
 }
 .sticker-shish{
@@ -94,7 +94,7 @@ a {
 .pouch{
   position: absolute;
   right: 210px;
-  bottom: 90px;
+  bottom: 20%;
 }
 .pouch-width{
   width: 80%;
@@ -132,14 +132,14 @@ a {
 }
 .sticker-barbucue{
   position: absolute;
-  left: 120px;
+  left: -10px;
   bottom: 210px;
 }
 .contact{
   position: absolute;
   left: 0px;
   right:0px;
-  top: -45%;
+  top: -35%;
 }
 .about-box{
   position: absolute;
@@ -157,10 +157,10 @@ a {
   width: 100%;
 }
 .contact-content{
-  width: 14%;
+  width: 21%;
 }
 .testimonial-content{
-  width: 40%;
+  width: 45%;
 }
 .testimonial-width{
   width: 45%;
@@ -173,7 +173,15 @@ a {
 .dropdown-container:hover .dropdown-menu {
   display: block;
 }
-
+.height-about{
+height: 18vh;
+}
+.top-about{
+  position:absolute;
+              top:-580px;
+              left:0px;
+              right:0px;
+            }
 @media only screen and (max-width: 600px) {
   .pouch{
     position: absolute;
@@ -248,10 +256,10 @@ a {
     height: 10vh;
   }
   .contact-content{
-    width: 45%;
+    width: 50%;
   }
   .testimonial-content{
-    width: 60%;
+    width: 67%;
   }
   .about-width{
     width: 45%;
@@ -260,22 +268,22 @@ a {
     position: absolute;
     left: 0px;
     right:0px;
-    top: -43%;
+    top: -25%;
   }
   .testimonial-width{
     width: 100%;
   }
 }
-@media only screen and (max-width: 1400px) and (min-height: 900px) {
+@media only screen and (min-width: 769px) and (max-width: 1359px) {
   .pouch{
     position: absolute;
     right: 210px;
-    bottom: 50%;
+    bottom: 30%;
   }
   .sticker{
     position: absolute;
-    left: 120px;
-    bottom: 73%;
+    left: 0%;
+    bottom: 54%;
   }
   .sticker-barbucue {
     position: absolute;
@@ -287,4 +295,50 @@ a {
   left: 120px;
   bottom: 65%;
 }
+.pouch-width{
+  width: 60%;
+}
+.sticker-width{
+  width: 63%;
+
+}
+.sticker-barbucue{
+  position: absolute;
+  left: 0%;
+  bottom: 63%;
+}
+.content{
+  position: absolute;
+  right:0% ;
+  bottom:-91px ;
+}
+.content-width{  
+  width: 70%;
+}
+.sticker-shish {
+  position: absolute;
+  left: 0%;
+  bottom: 63%;
+}
+.ring-width{
+  width: 50%;
+}
+.pizza1-width{
+  width: 9%;
+}
+.pasta-width{
+  width: 60%;
+}
+.shish-width{
+  width: 30%;
+}
+.height-about{
+  height: 30vh;
+  }
+  .top-about{
+  position:absolute;
+              top:-580px;
+              left:0px;
+              right:0px;
+            }
 }
