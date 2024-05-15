@@ -75,7 +75,7 @@ const Testimonial = () => {
             className="contact"
             sx={{
               p: { xs: 1, md: 4 },
-              height: { xs: '70vh', md: 'auto' },
+              height: { xs: 'auto', md: 'auto' },
               overflow: 'auto',
               width:"80%",
               borderRadius:'20px',
@@ -130,7 +130,7 @@ const Testimonial = () => {
                 >
                    Product Designer                
                    </Typography>
-                   <Box>
+                   <Box sx={{mb:2}}>
                     <img src="/testimonial-img.png" alt="" className="testimonial-width"/>
                    </Box>
               </Box>
@@ -138,6 +138,33 @@ const Testimonial = () => {
           </Grid>
         </Box>
       </Box>
+      <div className="floating-whatsapp-icon">
+      <motion.a 
+        href="https://wa.me/1234567890" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        animate={{
+          y: [-10, 0, -10],
+          transition: { duration: 2.1, repeat: Infinity },
+        }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#25d366",
+          borderRadius: "50%",
+          color: "white",
+          textAlign: "center",
+          fontSize: "30px",
+          boxShadow: "2px 2px 3px #999",
+        }}
+      >
+        <i className="fab fa-whatsapp" style={{color:'white'}}></i>
+      </motion.a>
+    </div>
+
       <FixedBottomNavigation />
     </>
   );

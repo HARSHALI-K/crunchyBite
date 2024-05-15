@@ -25,6 +25,7 @@ const About = () => {
             }}
           />
         </Box>
+        
         <Box sx={{position:'relative',display:{xs:'none',md:"flex"}}} className='height-about'>
           <Grid container spacing={2} sx={{}}>
             <Grid

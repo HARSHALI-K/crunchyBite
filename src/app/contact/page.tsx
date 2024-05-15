@@ -1,5 +1,5 @@
 "use client";
-import { Box, Button, CircularProgress, Grid, IconButton, Snackbar, TextField, Typography } from "@mui/material";
+import { Box, Button, CircularProgress, Grid, IconButton, Snackbar, SnackbarContent, TextField, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import NavbarBG from "../component/navbar-bg/page";
@@ -120,8 +120,48 @@ const onSubmit = async (data) => {
     <Box sx={{ textAlign: "center", }}>
       <img src="/contact-content.png" alt="" className="contact-content" style={{ textAlign: 'center' }} />
     </Box>
-    <Typography sx={{ fontFamily: "Mali", fontSize: { xs: '14px', md: '18px' }, color: "black", textAlign: "center", fontWeight: 'bold',pb:2 }}>Get in Touch - We're Here to Hear Your Crunchy Bites Stories!"</Typography>
+    <Typography sx={{  fontSize: { xs: '14px', md: '18px' }, color: "#404040", textAlign: "center", fontWeight: 'bold',pb:2 }}>Get in Touch - We're Here to Hear Your Crunchy Bites Stories!"</Typography>
   </Grid>
+  <Grid item xs={12} md={6} > 
+  <Box sx={{fontSize:{xs:"16px",md:'20px'},textAlign:"center",fontWeight:'bold',color:'black',mb:2}}>
+  THE SNACK BOAT GENERAL TRADING LLC
+  </Box>
+  <Box sx={{display:"flex",alignItems:'center',mb:{xs:2,md:4},fontSize:'22px',color:'#404040'}}>
+  <i className="fas fa-map-marker-alt" style={{fontWeight:'bold'}}></i> 
+  <Typography sx={{ml:2,fontWeight:'bold'}}>
+  <a href="https://maps.app.goo.gl/YoN87f1jz5zYfttUA" target="_blank" rel="noopener noreferrer">
+  Warehouse #22, M-35 , Musaffah Industrial, Abudhabi , UAE
+  </a>
+
+  </Typography>
+
+  </Box>
+  <Box sx={{display:"flex",alignItems:'center',mb:{xs:2,md:4},fontSize:'22px',color:'#404040'}}>
+  <i className="fas fa-mobile-alt" style={{fontWeight:'bold'}}></i>
+  <Typography sx={{ml:2,fontWeight:'bold'}}>
+  <a href="tel:+971 50 378 9577"
+                  target="_blank"
+                  rel="noopener noreferrer" >
+                 +971 50 378 9577
+                </a>
+  </Typography>
+  </Box>
+  <Box sx={{display:"flex",alignItems:'center',fontSize:'22px',color:'#404040',}}>
+  <i className="far fa-envelope" style={{fontWeight:'bold'}}></i> 
+  <Typography sx={{ml:2,fontWeight:'bold',}}>
+ 
+  <a
+                  href="mailto:sales@thesnackboat.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                   sales@thesnackboat.com
+                </a>
+  </Typography>
+  </Box>
+<Box sx={{margin:'auto',display:'flex',justifyContent:'center'}}>
+<img src="/bus.png" alt="" style={{width:'66%',}}/>
+</Box>  </Grid>
   <Grid
     item
     xs={12}
@@ -133,11 +173,11 @@ const onSubmit = async (data) => {
         <Grid item xs={12}>
           <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 } }} fullWidth name="full_name" placeholder='Enter Full Name' />
         </Grid>
-        <Grid item xs={12} md={6}>
-          <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 } }} fullWidth name="email_id" placeholder='Email ID' />
+        <Grid item xs={12} >
+          <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 } ,mr:2}} fullWidth name="email_id" placeholder='Email ID' />
         </Grid>
-        <Grid item xs={12} md={6}>
-          <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 } }} fullWidth name="mobile_no" placeholder='Mobile Number' />
+        <Grid item xs={12} >
+          <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 }  }} fullWidth name="mobile_no" placeholder='Mobile Number' />
         </Grid>
         <Grid item xs={12}>
           <RHFInput control={control} sx={{  mb: { xs: 1, md: 1 } }} fullWidth name="message" placeholder='Message' multiline rows={4} />
@@ -162,28 +202,21 @@ const onSubmit = async (data) => {
       </Grid>
     </form>
   </Grid>
-  <Grid item md={6} sx={{display:{xs:'none',md:'block'}}}>
-<img src="/bus.png" alt="" />
-  </Grid>
 </Grid>
-
-
        </Box>
         </Box>
         <FixedBottomNavigation />
-
-      <Snackbar
+        <Snackbar
   open={open}
   autoHideDuration={3000}
-  message="Message sent successfully"
   anchorOrigin={{
     vertical: 'top',
     horizontal: 'right'
   }}
-/>
-
+>
+  <SnackbarContent style={{ backgroundColor: 'green' }} message="Message sent successfully" />
+</Snackbar>
     </>
   );
 };
-
 export default Contact;
