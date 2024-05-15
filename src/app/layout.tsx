@@ -16,15 +16,15 @@ const keywordsArray = [{ key: "Crunchy", description: "crunchy bite" },
 { key: "shish & kebab", description: "shish & kebab chrunchy Bite" },
 { key: "Barbecue", description: "barbecue crunchy bite" },
 { key: "White Cheddar", description: "white Cheddar crunchy bite" },
-];
+{ key: "crunchybite.ae", description: "crunchybite.ae" },
 
-// Extract the 'key' values from the array of objects
+];
 const keywordsString = keywordsArray.map(keyword => keyword.key).join(", ");
 
 export const metadata: Metadata = {
   title: "Crunchy Bite",
   description: "Choose the Crunch,bite the crunch",
-  keywords: keywordsString, // Assign the concatenated string to the 'keywords' property
+  keywords: keywordsString, 
 };
 
 
