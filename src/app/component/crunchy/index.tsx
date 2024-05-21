@@ -125,6 +125,32 @@ const MyCarousel = () => {
                 }} />
                 <span style={{ color: "white" }}>Scroll Down</span>
             </div>)}
+            <div className="floating-whatsapp-icon">
+      <motion.a 
+      href="https://wa.me/971521746423" 
+      target="_blank" 
+        rel="noopener noreferrer" 
+        animate={{
+          y: [-10, 0, -10],
+          transition: { duration: 2.1, repeat: Infinity },
+        }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#25d366",
+          borderRadius: "50%",
+          color: "white",
+          textAlign: "center",
+          fontSize: "30px",
+          boxShadow: "2px 2px 3px #999",
+        }}
+      >
+        <i className="fab fa-whatsapp" style={{color:'white'}}></i>
+      </motion.a>
+    </div>
             <FixedBottomNavigation />
         </div>
     );
