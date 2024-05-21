@@ -72,7 +72,7 @@ const Testimonial = () => {
         <Box >
           <Grid
             container
-            className="contact"
+            className="contact-testimonial"
             sx={{
               p: { xs: 1, md: 4 },
               height: { xs: 'auto', md: 'auto' },
@@ -130,9 +130,9 @@ const Testimonial = () => {
                 >
                    Product Designer                
                    </Typography>
-                   <Box sx={{mb:2}}>
+                   {/* <Box sx={{mb:2}}>
                     <img src="/testimonial-img.png" alt="" className="testimonial-width"/>
-                   </Box>
+                   </Box> */}
               </Box>
             </Grid>
           </Grid>
@@ -140,8 +140,8 @@ const Testimonial = () => {
       </Box>
       <div className="floating-whatsapp-icon">
       <motion.a 
-        href="https://wa.me/1234567890" 
-        target="_blank" 
+      href="https://wa.me/971521746423" 
+      target="_blank" 
         rel="noopener noreferrer" 
         animate={{
           y: [-10, 0, -10],

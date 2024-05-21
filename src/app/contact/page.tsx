@@ -102,7 +102,7 @@ const onSubmit = async (data) => {
        <Box  >
        <Grid
   container
-  className='contact'
+  className='contact-testimonial'
   sx={{
     height: { xs: '70vh', md: 'auto' },
     overflow: 'auto',
@@ -124,6 +124,7 @@ const onSubmit = async (data) => {
   </Grid>
   <Grid item xs={12} md={6} > 
   <Box sx={{fontSize:{xs:"16px",md:'20px'},textAlign:"center",fontWeight:'bold',color:'black',mb:2}}>
+    <Typography sx={{fontSize:{xs:"14px",md:'16px'},textAlign:"center",fontWeight:'bold',color:'black',mb:2}}>Brand Owner and Marketed by:</Typography>
   THE SNACK BOAT GENERAL TRADING LLC
   </Box>
   <Box sx={{display:"flex",alignItems:'center',mb:{xs:2,md:4},fontSize:'22px',color:'#404040'}}>
@@ -139,17 +140,16 @@ const onSubmit = async (data) => {
   <Box sx={{display:"flex",alignItems:'center',mb:{xs:2,md:4},fontSize:'22px',color:'#404040'}}>
   <i className="fas fa-mobile-alt" style={{fontWeight:'bold'}}></i>
   <Typography sx={{ml:2,fontWeight:'bold'}}>
-  <a href="tel:+971 50 378 9577"
+  <a href="tel:+971 52 174 6423"
                   target="_blank"
                   rel="noopener noreferrer" >
-                 +971 50 378 9577
+                 +971 52 174 6423
                 </a>
   </Typography>
   </Box>
   <Box sx={{display:"flex",alignItems:'center',fontSize:'22px',color:'#404040',}}>
   <i className="far fa-envelope" style={{fontWeight:'bold'}}></i> 
   <Typography sx={{ml:2,fontWeight:'bold',}}>
- 
   <a
                   href="mailto:sales@thesnackboat.com"
                   target="_blank"
@@ -205,6 +205,32 @@ const onSubmit = async (data) => {
 </Grid>
        </Box>
         </Box>
+        <div className="floating-whatsapp-icon">
+      <motion.a 
+      href="https://wa.me/971521746423" 
+      target="_blank" 
+        rel="noopener noreferrer" 
+        animate={{
+          y: [-10, 0, -10],
+          transition: { duration: 2.1, repeat: Infinity },
+        }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#25d366",
+          borderRadius: "50%",
+          color: "white",
+          textAlign: "center",
+          fontSize: "30px",
+          boxShadow: "2px 2px 3px #999",
+        }}
+      >
+        <i className="fab fa-whatsapp" style={{color:'white'}}></i>
+      </motion.a>
+    </div>
         <FixedBottomNavigation />
         <Snackbar
   open={open}

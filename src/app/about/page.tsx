@@ -58,9 +58,16 @@ const About = () => {
     transition: { duration: 4.1, repeat: Infinity },
   }}
 />
-                <Typography sx={{color:'white',textAlign:'center',fontSize: { xs: '12px', md: "16px" },}}> “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “ “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “  “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “  “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “
+               
+<Typography sx={{color:'white',textAlign:'center',fontSize: { xs: '12px', md: "16px" },}}> Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness. Crunchy Bites snacks, marketed by THE SNACK BOAT GENERAL TRADING LLC, are known for their exceptional taste and quality.
+
+Crunchy Bites are not just another snack; they are the crunch that stands out. Our crunchy products are freshly seasoned to perfection, ensuring that every bite delivers a burst of flavor and satisfaction. From the tangy zest of Barbecue to the rich taste of White Cheddar, Crunchy Bites has a flavor for every palate.
+
+In addition to these classic flavors, Crunchy Bites also offers a variety of exciting options like Fried Chicken, Paprika, Pizza, Chilli and Lemon, and Shish & Kebab. Each flavor is crafted to deliver a unique and delicious snacking experience.
               </Typography>
-              <Typography sx={{color:'white',textAlign:'center',mt:4,fontSize: { xs: '12px', md: "16px" },}}>“ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “ “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! </Typography>
+              <Typography sx={{color:'white',textAlign:'center',mt:2,fontSize: { xs: '12px', md: "16px" },}}>Whether you're enjoying a movie night, packing a lunch, or just in need of a quick and tasty snack, Crunchy Bites is the perfect choice. Experience the delicious crunch that everyone is talking about!
+
+Crunchy Bites are more than just a snack; they are a flavor adventure waiting to be enjoyed. Try all our exciting flavors today and discover your favorite!  </Typography>
              </Box>
              
             </Grid>
@@ -93,9 +100,15 @@ const About = () => {
 />
              <img src="/about-content.png" alt=""  style={{width:"30%"}}/>
 
-                <Typography sx={{color:'white',textAlign:'center',fontSize: { xs: '12px', md: "16px" },}}> “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “ “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “  “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “  “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “
+                <Typography sx={{color:'white',textAlign:'center',fontSize: { xs: '12px', md: "16px" },}}> Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness. Crunchy Bites snacks, marketed by THE SNACK BOAT GENERAL TRADING LLC, are known for their exceptional taste and quality.
+
+Crunchy Bites are not just another snack; they are the crunch that stands out. Our crunchy products are freshly seasoned to perfection, ensuring that every bite delivers a burst of flavor and satisfaction. From the tangy zest of Barbecue to the rich taste of White Cheddar, Crunchy Bites has a flavor for every palate.
+
+In addition to these classic flavors, Crunchy Bites also offers a variety of exciting options like Fried Chicken, Paprika, Pizza, Chilli and Lemon, and Shish & Kebab. Each flavor is crafted to deliver a unique and delicious snacking experience.
               </Typography>
-              <Typography sx={{color:'white',textAlign:'center',mt:2,fontSize: { xs: '12px', md: "16px" },}}>“ Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness! “ “ Crunchy Bites snacks are my go-to choice for satisfying my cravings! </Typography>
+              <Typography sx={{color:'white',textAlign:'center',mt:2,fontSize: { xs: '12px', md: "16px" },}}>Whether you're enjoying a movie night, packing a lunch, or just in need of a quick and tasty snack, Crunchy Bites is the perfect choice. Experience the delicious crunch that everyone is talking about!
+
+Crunchy Bites are more than just a snack; they are a flavor adventure waiting to be enjoyed. Try all our exciting flavors today and discover your favorite!  </Typography>
              </Box>
              
             </Grid>
@@ -106,7 +119,32 @@ const About = () => {
           </Grid>
 
           </Box>
-
+          <div className="floating-whatsapp-icon">
+      <motion.a 
+      href="https://wa.me/971521746423" 
+      target="_blank" 
+        rel="noopener noreferrer" 
+        animate={{
+          y: [-10, 0, -10],
+          transition: { duration: 2.1, repeat: Infinity },
+        }}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+          height: "100%",
+          backgroundColor: "#25d366",
+          borderRadius: "50%",
+          color: "white",
+          textAlign: "center",
+          fontSize: "30px",
+          boxShadow: "2px 2px 3px #999",
+        }}
+      >
+        <i className="fab fa-whatsapp" style={{color:'white'}}></i>
+      </motion.a>
+    </div>
           <FixedBottomNavigation/>
         </Box>
   
