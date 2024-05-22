@@ -90,7 +90,7 @@ export default function Navbar() {
         }}
       >
         <Box onClick={() => push("/")} sx={{ cursor: "pointer" }}>
-          <img src="/images/CrunchyBite-logo.png" loading="lazy" />
+          <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="image not found"/>
         </Box>
         <Box onClick={handleDrawerToggleclose} sx={{ fontSize: "20px" }}>
           <i className="fas fa-times"></i>
@@ -227,7 +227,7 @@ export default function Navbar() {
           }}
         >
           <Box onClick={() => push("/")} sx={{ cursor: "pointer" }}>
-            <img src="/images/CrunchyBite-logo.png" loading="lazy" />
+            <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="image not found"/>
           </Box>
         
           <Box
