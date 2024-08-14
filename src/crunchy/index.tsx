@@ -2,18 +2,21 @@
 "use client"
 import React, { useState, useEffect } from 'react';
 import { Button } from '@mui/material';
-import Pizza from '../pages/pizza/page';
-import Barbecue from '../pages/barbucue/page';
-import Cheddar from '../pages/cheddar/page';
-import FriedChicken from '../pages/fried-chicken/page';
-import Paprika from '../pages/paprika/page';
-import Shishkebab from '../pages/shishkebab/page';
-import NavbarBG from '../navbar-bg/page';
-import FixedBottomNavigation from '../footer/page';
-import Lemon from '../pages/lemon/page';
+// import Pizza from '@/app/component/app/pages/pizza/page';
+import Barbecue from '@/app/component/pages/barbucue/page';
+import Cheddar from '@/app/component/pages/cheddar/page';
+import FriedChicken from '@/app/component/pages/fried-chicken/page';
+import Paprika from '@/app/component/pages/paprika/page';
+import Shishkebab from '@/app/component/pages/shishkebab/page';
+// import NavbarBG from '../navbar-bg/page';
+//import FixedBottomNavigation from '../footer/page';
+import Lemon from '@/app/component/pages/lemon/page';
 import { motion } from 'framer-motion';
 import { useSearchParams } from 'next/navigation';
-import Navbar from '../navbar/page';
+import NavbarBG from '@/app/component/navbar-bg/page';
+import Navbar from '@/app/component/navbar/page';
+import FixedBottomNavigation from '@/app/component/footer/page';
+import Pizza from '@/app/component/pages/pizza/page';
 
 const components = [<FriedChicken />, <Pizza />, <Barbecue />, <Cheddar />, <Lemon />, <Shishkebab />, <Paprika />];
 const colors = ['#000000', '#59A125', '#000000', '#B39846', '#3EAA06', '#930DE5', '#5D42FF'];
