@@ -1,11 +1,11 @@
 import { Metadata } from "next"
-import About from "."
+import MyCarousel from "."
 
 export const metadata:Metadata ={
-  title:'About | Crunchy Bite',
+  title:'Home | Crunchy Bite',
   description:"Crunchy Bite"
 }
 const Page =()=>{
-return <About/>
+return <MyCarousel/>
 }
 export default Page
