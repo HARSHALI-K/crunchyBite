@@ -14,7 +14,7 @@ import { Button, Grid } from "@mui/material";
 import { useRouter } from "next/navigation";
 import '@fortawesome/fontawesome-free/css/all.css'
 
-const navItems = ["Home", "Our Snacks", "About",'Testimonial' ,"Contact Us"];
+const navItems = ["Home", "Our Snacks", "About",'Testimonial',"Blog" ,"Contact Us"];
 const navlinks = [
   "Privacy Policy",
   "Disclaimer",
@@ -36,6 +36,9 @@ export default function FixedBottomNavigation() {
     }
     if(item ==='Contact Us'){
       push('/contact')
+    }
+    if(item ==='Blog'){
+      push('/blog')
     }
     if(item ==='Testimonial'){
       push('/testimonial')
