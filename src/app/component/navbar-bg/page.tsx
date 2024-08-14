@@ -26,6 +26,7 @@ const navItems = [
   ,
   "About",
   "Testimonial",
+  "Blog",
   "Contact Us",
 ];
 export default function NavbarBG() {
@@ -47,6 +48,9 @@ export default function NavbarBG() {
     }
     if (item === "Contact Us") {
       push("/contact");
+    }
+    if (item === "Blog") {
+      push("/blog");
     }
     if (item === "Testimonial") {
       push("/testimonial");
