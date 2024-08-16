@@ -5,6 +5,7 @@ const nextConfig = {typescript: {
     // your project has type errors.
     // !! WARN !!
     ignoreBuildErrors: true,
-  },};
+  },
+};
 
 export default nextConfig;

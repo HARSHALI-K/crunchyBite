@@ -3,9 +3,9 @@ import "@fortawesome/fontawesome-free/css/all.css";
 // import MyCarousel from "./component/crunchy";
 import { Suspense } from "react";
 import dynamic from "next/dynamic";
-import { Head } from "next/document";
 import Script from "next/script";
 import { Metadata } from "next";
+import Head from "next/head";
 const MyCarousel = dynamic(() => import("../crunchy"), {});
 const keywordsArray = [
   { key: "Crunchy", description: "crunchy bite" },
@@ -24,23 +24,28 @@ const keywordsArray = [
 const keywordsString = keywordsArray.map((keyword) => keyword.key).join(", ");
 
 export const metadata: Metadata = {
-  title: "Home | Crunchy Bite",
-  description: "Choose the Crunch,bite the crunch Crunchy Bite",
+  title: "Home54 | Crunchy Bite",
+  description: "Choose the Crunch, bite the crunch Crunchy Bite",
   keywords: keywordsString,
   icons: {
     icon: './favicon.ico',
     apple: './favicon.ico',
     shortcut: './favicon.ico',
+  },
+  verification: {
+    google: "sCmqM6OTUcW-VJsG-vUkK1LKG86yNz_5HwKQHhtUgLI"
   }
 };
+
 export default function Home() {
   return (
     <>
-  
       <Suspense>
+     
         <MyCarousel />
       </Suspense>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-XD2RH1RHJ1" strategy="lazyOnload" /><Script id="google-analytics" strategy="lazyOnload">
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-XD2RH1RHJ1" strategy="lazyOnload" />
+      <Script id="google-analytics" strategy="lazyOnload">
       {`
            window.dataLayer = window.dataLayer || [];
            function gtag(){dataLayer.push(arguments);}
@@ -50,10 +55,10 @@ export default function Home() {
          
         `}
     </Script>
-    <Script
+    {/* <Script
     async
     src="https://www.googletagmanager.com/gtag/js?id=G-XD2RH1RHJ1"
-/>
+/> */}
 
   
       
