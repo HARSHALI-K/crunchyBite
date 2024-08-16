@@ -94,7 +94,7 @@ const Testimonial = () => {
               <Box sx={{mb:2,pt:2}}>
               <img
                 src="/testimonial-content.png"
-                alt=""
+                alt="testimonial crunchy bite"
                 className="testimonial-content"
                 style={{ textAlign: "center",display:'flex',margin:'auto', }}
               />

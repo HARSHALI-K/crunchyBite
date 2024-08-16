@@ -15,7 +15,7 @@ const Shishkebab = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-white.png"
-            alt=""
+            alt="shish kebab crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -29,7 +29,7 @@ const Shishkebab = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-mobile.png"
-            alt=""
+            alt="shish kebab crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -61,37 +61,37 @@ const Shishkebab = () => {
               <motion.img
                className='sticker-width'
                 src="/images/shish-sticker.png"
-                alt=""
+                alt="shish kebab crunchy bite"
                 initial={{ opacity: 0, y: -500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
               />
               <Box className='content-pizza'>
-                <motion.img className='content-width' src="/images/shish-content.png" alt="" 
+                <motion.img className='content-width' src="/images/shish-content.png" alt="shish kebab crunchy bite" 
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}/>
               </Box>
               <Box sx={{ position: "absolute", right: "199px", bottom: "-270px" }}>
-                <motion.img className='ring-width' src="/images/shish7.png" alt=""  animate={{
+                <motion.img className='ring-width' src="/images/shish7.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-189px", bottom: "-27px" }}>
-                <motion.img className='ring-width' src="/images/shish9.png" alt=""  animate={{
+                <motion.img className='ring-width' src="/images/shish9.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-123px", bottom: "-241px" }}>
-                <motion.img className='ring-width' src="/images/shish8.png" alt=""  animate={{
+                <motion.img className='ring-width' src="/images/shish8.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "399px", bottom: "-64px" }}>
-                <motion.img className='ring-width' src="/images/shsh6.png" alt=""  animate={{
+                <motion.img className='ring-width' src="/images/shsh6.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -109,12 +109,12 @@ const Shishkebab = () => {
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                alt=""
+                alt="shish kebab crunchy bite"
               />
              <Box sx={{position:'relative'}}>
              <Box
                 sx={{ position: "absolute", right: "-50px", bottom: "341px" }}>
-                <motion.img className='pasta-width' src="/images/shish1.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/shish1.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -123,7 +123,7 @@ const Shishkebab = () => {
                    <motion.img 
   style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
   src="/images/shish_logo.png" 
-  alt="" 
+  alt="shish kebab crunchy bite" 
   animate={{
     x: [10, 0, 10], 
     y: [15, 0, 15], 
@@ -135,7 +135,7 @@ const Shishkebab = () => {
                    <motion.img 
   style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
   src="/images/shish2_logo.png" 
-  alt="" 
+  alt="shish kebab crunchy bite" 
   animate={{
     x: [10, 0, 10], 
     y: [15, 0, 15], 
@@ -144,13 +144,13 @@ const Shishkebab = () => {
 />
               </Box>
               <Box sx={{ position: "absolute", right: "-67px", bottom: "-80px" }}>
-                <motion.img style={{ width: "70%" }} src="/images/shish3.png" alt=""  animate={{
+                <motion.img style={{ width: "70%" }} src="/images/shish3.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", right: "-124px", bottom: "95px" }}>
-                <motion.img className='ring-width' src="/images/shish2.png" alt=""  animate={{
+                <motion.img className='ring-width' src="/images/shish2.png" alt="shish kebab crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -161,7 +161,7 @@ const Shishkebab = () => {
                 <motion.img
                  className='ring-width'
                   src="/images/shish6.png"
-                  alt=""
+                  alt="shish kebab crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -174,7 +174,7 @@ const Shishkebab = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/shish5.png"
-                  alt=""
+                  alt="shish kebab crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -187,7 +187,7 @@ const Shishkebab = () => {
                 <motion.img
                 className='shish-width'
                   src="/images/shish4.png"
-                  alt=""
+                  alt="shish kebab crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },

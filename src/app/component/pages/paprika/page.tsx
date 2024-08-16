@@ -15,7 +15,7 @@ const Paprika = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-white.png"
-            alt=""
+            alt="paprika crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -29,7 +29,7 @@ const Paprika = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-mobile.png"
-            alt=""
+            alt="paprika crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -64,23 +64,23 @@ const Paprika = () => {
                 initial={{ opacity: 0, y: -500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
-                alt=""
+                alt="paprika crunchy bite"
               />
               <Box className='content'>
-                <motion.img className='content-width' src="/images/paprika-content.png" alt="" 
+                <motion.img className='content-width' src="/images/paprika-content.png" alt="paprika crunchy bite" 
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}/>
               </Box>
            
               <Box sx={{ position: "absolute", left: "-141px", bottom: "-182px" }}>
-                <motion.img className='pasta-width' src="/images/pasta5.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/pasta5.png" alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-212px", bottom: "-10px" }}>
-                <motion.img className='pasta-width' src="/images/pasta6.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/pasta6.png" alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -94,7 +94,7 @@ const Paprika = () => {
               <motion.img
                className='pouch-width'
                 src="/images/paprika.png"
-                alt=""
+                alt="paprika crunchy bite"
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -102,7 +102,7 @@ const Paprika = () => {
              <Box sx={{position:'relative'}}>
             
               <Box sx={{ position: "absolute", right: "-232px", bottom: "-30px" }}>
-                <motion.img style={{ width: "70%" }} src="/images/pasta2.png" alt=""  animate={{
+                <motion.img style={{ width: "70%" }} src="/images/pasta2.png" alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -111,7 +111,7 @@ const Paprika = () => {
                    <motion.img 
   style={{width:"80%",transform: 'translate(50%, 50%)',  }} 
   src="/images/paprika_logo.png" 
-  alt="" 
+  alt="paprika crunchy bite" 
   animate={{
     x: [10, 0, 10], 
     y: [15, 0, 15], 
@@ -120,13 +120,13 @@ const Paprika = () => {
 />
               </Box>
               <Box sx={{ position: "absolute", right: "-109px", bottom: "211px" }}>
-                <motion.img style={{ width: "70%" }} src="/images/chilli1.png" alt=""  animate={{
+                <motion.img style={{ width: "70%" }} src="/images/chilli1.png" alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", right: "-41px", bottom: "90px" }}>
-                <motion.img className='pasta-width' src="/images/pasta1.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/pasta1.png" alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -139,7 +139,7 @@ const Paprika = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/pasta3.png"
-                  alt=""  animate={{
+                  alt="paprika crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}
@@ -151,7 +151,7 @@ const Paprika = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/chili3.png"
-                  alt=""
+                  alt="paprika crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -164,7 +164,7 @@ const Paprika = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/pasta4.png"
-                  alt=""
+                  alt="paprika crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -177,7 +177,7 @@ const Paprika = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/chilli2.png"
-                  alt=""
+                  alt="paprika crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
