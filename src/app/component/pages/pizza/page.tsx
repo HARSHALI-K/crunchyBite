@@ -15,7 +15,7 @@ const Pizza = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-white.png"
-            alt=""
+            alt="pizza crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -29,7 +29,7 @@ const Pizza = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-mobile.png"
-            alt=""
+            alt="pizza crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -61,13 +61,13 @@ const Pizza = () => {
               <motion.img
               className='sticker-width'
               src="/images/pizza-sticker.png"
-                alt=""
+                alt="pizza crunchy bite"
                 initial={{ opacity: 0, y: -500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
               />
               <Box className='content-pizza' >
-                <motion.img className='content-width' src="/images/pizza-content.png" alt=""
+                <motion.img className='content-width' src="/images/pizza-content.png" alt="pizza crunchy bite"
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }} />
@@ -75,26 +75,26 @@ const Pizza = () => {
               <Box sx={{ position: "absolute", right: "-852px", bottom: "0px" }}>
                 <motion.img                
                 className="ring-width"
- src="/images/pizza2.png" alt=""  animate={{
+ src="/images/pizza2.png" alt="pizza crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }} />
               </Box>
               <Box sx={{ position: "absolute", left: "-141px", bottom: "-131px" }}>
-                <motion.img  src="/images/pizzachiseball4.png" alt=""  animate={{
+                <motion.img  src="/images/pizzachiseball4.png" alt="pizza crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "9px", bottom: "-84px" }}>
                 <motion.img                className="ring-width"
- src="/images/ring1.png" alt=""  animate={{
+                         src="/images/ring1.png" alt="pizza crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-260px", bottom: "-232px" }}>
-                <motion.img  src="/images/ring2.png" alt=""  animate={{
+                <motion.img  src="/images/ring2.png" alt="pizza crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>

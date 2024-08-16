@@ -15,7 +15,7 @@ const Cheddar = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-white.png"
-            alt=""
+            alt="white cheddar crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -29,7 +29,7 @@ const Cheddar = () => {
           <motion.img
             style={{ width: "100%",}}
             src="/images/bg-mobile.png"
-            alt=""
+            alt="white cheddar crunchy bite"
 
             animate={{
               y: [-15, 0, -15],
@@ -61,32 +61,32 @@ const Cheddar = () => {
               <motion.img
                     className='sticker-width'        
                             src="/images/chaddar-sticker.png"
-                alt=""
+                alt="white cheddar crunchy bite"
                initial={{ opacity: 0, y: -500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}
               />
               <Box className='content-chaddar'>
-                <motion.img className='content-width' src="/images/chaddar-content.png" alt="" initial={{ opacity: 0, y: 500 }} 
+                <motion.img className='content-width' src="/images/chaddar-content.png" alt="white cheddar crunchy bite" initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.6, ease: "easeOut" }}/>
               </Box>
               <Box sx={{ position: "absolute", right: "104px", bottom: "-250px" }}>
-                <motion.img className='ring-width' src="/images/chiddar7.png" alt="" 
+                <motion.img className='ring-width' src="/images/chiddar7.png" alt="white cheddar crunchy bite" 
                  animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 2.1, repeat: Infinity },
                 }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-227px", bottom: "-116px" }}>
-                <motion.img className='ring-width' src="/images/chiddar9.png" alt="" 
+                <motion.img className='ring-width' src="/images/chiddar9.png" alt="white cheddar crunchy bite" 
                  animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 2.1, repeat: Infinity },
                 }}/>
               </Box>
               <Box sx={{ position: "absolute", left: "-55px", bottom: "-170px" }}>
-                <motion.img className='ring-width' src="/images/chiddar8.png" alt="" 
+                <motion.img className='ring-width' src="/images/chiddar8.png" alt="white cheddar crunchy bite" 
                  animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 2.1, repeat: Infinity },
@@ -102,7 +102,7 @@ const Cheddar = () => {
               <motion.img
                className='pouch-width'
                 src="/images/WhiteCheddar.png"
-                alt=""
+                alt="white cheddar crunchy bite"
                 initial={{ opacity: 0, y: 500 }} 
                 animate={{ opacity: 1, y: 0 }} 
                 transition={{ duration: 0.5, ease: "easeOut" }}
@@ -110,19 +110,19 @@ const Cheddar = () => {
              <Box sx={{position:'relative'}}>
              <Box
                 sx={{ position: "absolute", right: "17px", bottom: "276px" }}>
-                <motion.img className='pasta-width' src="/images/chiddar.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/chiddar.png" alt="white cheddar crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }} />
               </Box>
               <Box sx={{ position: "absolute", right: "-360px", bottom: "-30px" }}>
-                <motion.img style={{ width: "70%" }} src="/images/chiddar3.png" alt=""  animate={{
+                <motion.img style={{ width: "70%" }} src="/images/chiddar3.png" alt="white cheddar crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
               </Box>
               <Box sx={{ position: "absolute", right: "-210px", bottom: "-60px" }}>
-                <motion.img className='pasta-width' src="/images/chiddar3.png" alt=""  animate={{
+                <motion.img className='pasta-width' src="/images/chiddar3.png" alt="white cheddar crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}/>
@@ -133,7 +133,7 @@ const Cheddar = () => {
                 <motion.img
                   className='ring-width'
                   src="/images/chiddar6.png"
-                  alt=""
+                  alt="white cheddar crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -146,7 +146,7 @@ const Cheddar = () => {
                 <motion.img
                  className='pasta-width'
                   src="/images/chiddar2.png"
-                  alt=""
+                  alt="white cheddar crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -158,7 +158,7 @@ const Cheddar = () => {
                 <motion.img
                   className='pasta-width'
                   src="/images/chiddar5.png"
-                  alt=""  animate={{
+                  alt="white cheddar crunchy bite"  animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
                   }}
@@ -170,7 +170,7 @@ const Cheddar = () => {
                 <motion.img
                   className='ring-width'
                   src="/images/chiddar4.png"
-                  alt=""
+                  alt="white cheddar crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },

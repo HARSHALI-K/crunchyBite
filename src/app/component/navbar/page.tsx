@@ -12,12 +12,12 @@ import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { ImageListItem, Menu, MenuItem } from "@mui/material";
+import { ImageListItem, Link, Menu, MenuItem } from "@mui/material";
 import { useRouter } from "next/navigation";
 import '@fortawesome/fontawesome-free/css/all.css'
 
 const drawerWidth = 240;
-const navItems = [
+const navItemsMobile = [
   "Home",
   <span key="snacks">
     Our Snacks{" "}
@@ -29,6 +29,30 @@ const navItems = [
   "Blog",
   "Contact Us",
 ];
+const navItems = [
+  { label: "Home", link: "https://www.crunchybite.ae" },
+  { 
+    label: (
+      <span key="snacks">
+        Our Snacks{" "}
+        <i className="fas fa-angle-down" style={{ marginRight: "15px" }}></i>
+      </span>
+    ), 
+    subItems: [
+      { label: "Fried Chicken", link: "https://www.crunchybite.ae/?index=0" },
+      { label: "Pizza", link: "https://www.crunchybite.ae/?index=1" },
+      { label: "Barbecue", link: "https://www.crunchybite.ae/?index=2" },
+      { label: "White Cheddar", link: "https://www.crunchybite.ae/?index=3" },
+      { label: "Chilli & Lemon", link: "https://www.crunchybite.ae/?index=4" },
+      { label: "Shish Kebab", link: "https://www.crunchybite.ae/?index=5" },
+      { label: "Paprika", link: "https://www.crunchybite.ae/?index=6" },
+    ],
+  },
+  { label: "About", link: "https://www.crunchybite.ae/about" },
+  { label: "Testimonial", link: "https://www.crunchybite.ae/testimonial" },
+  { label: "Blog", link: "https://www.crunchybite.ae/blog" },
+  { label: "Contact Us", link: "https://www.crunchybite.ae/contact" },
+];
 export default function Navbar() {
   // const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -38,7 +62,7 @@ export default function Navbar() {
   };
   const { push } = useRouter();
 
-  const handleNavigation = (item) => {
+  const handleNavigationMobile = (item) => {
     console.log(item);
     if (item === "Home") {
       push("/");
@@ -56,6 +80,13 @@ export default function Navbar() {
       push("/testimonial");
     }
   };
+  const handleNavigation = (item) => {
+    console.log(item);
+
+    if (item.link) {
+      push(item.link); // Assuming `push` is your navigation function
+    }
+  };
   const handleMenuClose = () => {
     setAnchorEl(null);
   };
@@ -70,9 +101,12 @@ export default function Navbar() {
       console.log("Home");
     }
   };
+  const [openMenu, setOpenMenu] = React.useState(null);
 
-  const handleClick = (event) => {
+  const handleClick = (event,label) => {
     setAnchorEl(event.currentTarget);
+    setOpenMenu(label);
+
   };
 
   const handleClose = () => {
@@ -94,14 +128,14 @@ export default function Navbar() {
         }}
       >
         <Box onClick={() => push("/")} sx={{ cursor: "pointer" }}>
-          <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="image not found"/>
+          <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="crunchy bite"/>
         </Box>
         <Box onClick={handleDrawerToggleclose} sx={{ fontSize: "20px" }}>
           <i className="fas fa-times"></i>
         </Box>
       </Box>
       <List>
-        {navItems.map((item) => (
+      {navItemsMobile.map((item) => (
           <ListItem key={item} disablePadding>
             {typeof item === "object" ? (
               <Box sx={{ display: { xs: "flex", sm: "none" } }}>
@@ -201,7 +235,7 @@ export default function Navbar() {
                   textTransform: "inherits",
                   paddingRight: "10px",
                 }}
-                onClick={() => handleNavigation(item)}
+                onClick={() => handleNavigationMobile(item)}
               >
                 <ListItemText primary={item} />
               </ListItemButton>
@@ -231,7 +265,7 @@ export default function Navbar() {
           }}
         >
           <Box onClick={() => push("/")} sx={{ cursor: "pointer" }}>
-            <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="image not found"/>
+            <img src="/images/CrunchyBite-logo.png" loading="lazy" alt="crunchy bite"/>
           </Box>
         
           <Box
@@ -247,112 +281,67 @@ export default function Navbar() {
 
           </Box>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Box key={item} style={{ display: "inline-block", }} onMouseLeave={handleClose}>
-                {typeof item === "object" ? (
-                  <Box  onMouseEnter={handleClick}
-                  onMouseLeave={handleClose}
-                  style={{ position: 'relative' }}>
-                    <Button
-                      aria-controls="simple-menu"
-                      aria-haspopup="true"
-                      onClick={handleClick}
-                      sx={{color:{ xs:"black",md:'white'},}}
-                      style={{
-                        textTransform: "inherit",
-                        fontSize: "18px",
-                        fontFamily: "Mali",
-                        cursor: "pointer"
-                      }}
-                      MenuListProps={{
-                        onMouseEnter: handleClick, 
-                        onMouseLeave: handleClose,
-                    }}
-                    >
-                      {item}
-                    </Button>
-                    <Menu
-                      id="simple-menu"
-                      anchorEl={anchorEl}
-                      keepMounted
-                      open={Boolean(anchorEl)}
-                      onClose={handleClose}
-                      onMouseLeave={handleClose}
-                    >
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=0`);
-                          handleClose();
-                        }}
-                      >
-                        Fried Chicken
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=1`);
-                          handleClose();
-                        }}
-                      >
-                        Pizza
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=2`);
-                          handleClose();
-                        }}
-                      >
-                        Barbecue
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=3`);
-                          handleClose();
-                        }}
-                      >
-                        White Cheddar
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=4`);
-                          handleClose();
-                        }}
-                      >
-                        Chilli & Lemon
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=5`);
-                          handleClose();
-                        }}
-                      >
-                        Shish Kebab
-                      </MenuItem>
-                      <MenuItem
-                        onClick={() => {
-                          push(`/?index=6`);
-                          handleClose();
-                        }}
-                      >
-                        Paprika
-                      </MenuItem>
-                    </Menu>
-                  </Box>
-                ) : (
-                  <Button
-                    onClick={() => handleNavigation(item)}
-                    sx={{
-                      color:{ xs:"black",md:'white'},
-                      paddingRight: "40px",
-                      textTransform: "inherit",
-                      fontSize: "18px",
-                      fontFamily: "Mali",
-                    }}
+          {navItems.map((item, index) => (
+        <Box
+          key={index}
+          style={{ display: "inline-block" }}
+          onMouseLeave={handleClose}
+        >
+          {item.subItems ? (
+            <Box
+              onMouseEnter={(event) => handleClick(event, item.label)}
+              style={{ position: 'relative' }}
+              component={Link}
+            >
+              <Button
+                aria-controls="simple-menu"
+                aria-haspopup="true"  
+                onClick={(event) => handleClick(event, item.label)}
+                sx={{ color: { xs: "black", md: "white" } }}
+                style={{
+                  textTransform: "inherit",
+                  fontSize: "18px",
+                  fontFamily: "Mali",
+                  cursor: "pointer",
+                }}
+              >
+                {item.label}
+              </Button>
+              <Menu
+                id="simple-menu"
+                anchorEl={anchorEl}
+                keepMounted
+                open={Boolean(anchorEl) && openMenu === item.label}
+                onClose={handleClose}
+              >
+                {item.subItems.map((subItem, subIndex) => (
+                  <MenuItem
+
+                    key={subIndex}
+                    onClick={() => handleNavigation(subItem)}
                   >
-                    {item}
-                  </Button>
-                )}
-              </Box>
-            ))}
+                    {subItem.label}
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          ) : (
+            <Button
+              onClick={() => handleNavigation(item)}
+              sx={{
+                color: { xs: "black", md: "white" },
+                paddingRight: "40px",
+                textTransform: "inherit",
+                fontSize: "18px",
+                fontFamily: "Mali",
+              }}
+              href={item.link}
+            >
+              {item.label}
+            </Button>
+          )}
+        </Box>
+      ))}
           </Box>
         </Toolbar>
       </AppBar>

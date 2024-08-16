@@ -39,7 +39,7 @@ const About = () => {
              <motion.img 
   style={{ position: 'absolute', left: '-66px', top: '-38px',width:"20%" }} 
   src="/images/pizza-icon.png" 
-  alt="" 
+  alt="pizza crunchy bite" 
   animate={{
     x: [-30, 0, -30], // Moves the image horizontally
     y: [-25, 0, -25], // Moves the image vertically
@@ -47,7 +47,7 @@ const About = () => {
   }}
 />
 
-            <img src="/about-content.png" alt=""  style={{width:"30%"}}/>
+            <img src="/about-content.png" alt="about crunchy bite"  style={{width:"30%"}}/>
             <motion.img 
   style={{ position: 'absolute', right: '-160px', bottom: '-18px',width:"20%",transform: 'translate(50%, 50%)',  }} 
   src="/images/chiddar2.png" 
@@ -76,7 +76,7 @@ Crunchy Bites are more than just a snack; they are a flavor adventure waiting to
           <img style={{ position:'absolute',
               bottom:'0px',
               left:'0px',
-              right:'0px',width:"100%"}} src="/about.pouch.png" alt=""  />
+              right:'0px',width:"100%"}} src="/about.pouch.png" alt="about crunchy bite"  />
              
           </Box>
           <Box sx={{ height:"auto",display:{xs:'flex',md:"none"},justifyContent:"center",flexDirection:'column'}}>
@@ -98,7 +98,7 @@ Crunchy Bites are more than just a snack; they are a flavor adventure waiting to
     transition: { duration: 4.1, repeat: Infinity },
   }}
 />
-             <img src="/about-content.png" alt=""  style={{width:"30%"}}/>
+             <img src="/about-content.png" alt="about crunchy bite"  style={{width:"30%"}}/>
 
                 <Typography sx={{color:'white',textAlign:'center',fontSize: { xs: '12px', md: "16px" },}}> Crunchy Bites snacks are my go-to choice for satisfying my cravings! Whether it's their zesty BBQ flavor or their classic sea salt, each bite is packed with crunch and deliciousness. Crunchy Bites snacks, marketed by THE SNACK BOAT GENERAL TRADING LLC, are known for their exceptional taste and quality.
 
@@ -113,7 +113,7 @@ Crunchy Bites are more than just a snack; they are a flavor adventure waiting to
              
             </Grid>
          <Grid item xs={12} sx={{backgroundColor:'black'}}>
-                    <img style={{ width:"100%",margin:"auto",paddingBottom:'20%'}} src="/about.pouch.png" alt=""  />
+                    <img style={{ width:"100%",margin:"auto",paddingBottom:'20%'}} src="/about.pouch.png" alt="about crunchy bite"  />
 
          </Grid>
           </Grid>

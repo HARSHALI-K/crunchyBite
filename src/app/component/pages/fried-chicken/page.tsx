@@ -21,7 +21,7 @@ const FriedChicken = () => {
           <motion.img
             style={{ width: "100%" }}
             src="/images/bg-white.png"
-            alt=""
+            alt="fried chicken crunchy bite"
             animate={{
               y: [-15, 0, -15],
               transition: { duration: 3.1, repeat: Infinity },
@@ -40,7 +40,7 @@ const FriedChicken = () => {
           <motion.img
             style={{ width: "100%" }}
             src="/images/bg-mobile.png"
-            alt=""
+            alt="fried chicken crunchy bite"
             animate={{
               y: [-15, 0, -15],
               transition: { duration: 3.1, repeat: Infinity },
@@ -70,7 +70,7 @@ const FriedChicken = () => {
             <motion.img
               className="sticker-width"
               src="/images/fried-sticker.png"
-              alt=""
+              alt="fried chicken crunchy bite"
               initial={{ opacity: 0, y: -500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
@@ -79,7 +79,7 @@ const FriedChicken = () => {
               <motion.img
                 className="content-width"
                 src="/images/fried-content.png"
-                alt=""
+                alt="fried chicken crunchy bite"
                 initial={{ opacity: 0, y: 400 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, ease: "easeOut" }}
@@ -89,7 +89,7 @@ const FriedChicken = () => {
               <motion.img
                 className="ring-width"
                 src="/images/chicken3.png"
-                alt=""
+                alt="fried chicken crunchy bite"
                 animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 3.1, repeat: Infinity },
@@ -102,7 +102,7 @@ const FriedChicken = () => {
               <motion.img
                 className="ring-width"
                 src="/images/chiken5.png"
-                alt=""
+                alt="fried chicken crunchy bite"
                 animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 2.1, repeat: Infinity },
@@ -113,7 +113,7 @@ const FriedChicken = () => {
               <motion.img
                 className="ring-width"
                 src="/images/ring1.png"
-                alt=""
+                alt="fried chicken crunchy bite"
                 animate={{
                   y: [-10, 0, -10],
                   transition: { duration: 2.1, repeat: Infinity },
@@ -125,7 +125,7 @@ const FriedChicken = () => {
             <motion.img
               className="pouch-width"
               src="/images/FriedChicken.png"
-              alt=""
+              alt="fried chicken crunchy bite"
               initial={{ opacity: 0, y: 500 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -138,7 +138,7 @@ const FriedChicken = () => {
                 <motion.img
                   style={{ width: "100%" }}
                   src="/images/ring1.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -151,7 +151,7 @@ const FriedChicken = () => {
                 <motion.img
                   style={{ width: "70%" }}
                   src="/images/ring3.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -164,7 +164,7 @@ const FriedChicken = () => {
                    <motion.img 
   style={{width:"100%",transform: 'translate(50%, 50%)',  }} 
   src="/images/chicken_logo.png" 
-  alt="" 
+  alt="fried chicken crunchy bite" 
   animate={{
     x: [10, 0, 10], 
     y: [15, 0, 15], 
@@ -176,7 +176,7 @@ const FriedChicken = () => {
                 <motion.img
                   style={{ width: "100%" }}
                   src="/images/ring2.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -189,7 +189,7 @@ const FriedChicken = () => {
                 <motion.img
                   className="ring-width"
                   src="/images/ring6.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -202,7 +202,7 @@ const FriedChicken = () => {
                 <motion.img
                   className="ring-width"
                   src="/images/ring6.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -215,7 +215,7 @@ const FriedChicken = () => {
                 <motion.img
                   style={{ width: "100%" }}
                   src="/images/chicken1.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },
@@ -228,7 +228,7 @@ const FriedChicken = () => {
                 <motion.img
                   style={{ width: "100%" }}
                   src="/images/chicken2.png"
-                  alt=""
+                  alt="fried chicken crunchy bite"
                   animate={{
                     y: [-10, 0, -10],
                     transition: { duration: 2.1, repeat: Infinity },

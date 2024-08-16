@@ -118,7 +118,7 @@ const onSubmit = async (data) => {
 >
   <Grid xs={12} item>
     <Box sx={{ textAlign: "center", }}>
-      <img src="/contact-content.png" alt="" className="contact-content" style={{ textAlign: 'center' }} />
+      <img src="/contact-content.png" alt="contact crunchy bite" className="contact-content" style={{ textAlign: 'center' }} />
     </Box>
     <Typography sx={{  fontSize: { xs: '14px', md: '18px' }, color: "#404040", textAlign: "center", fontWeight: 'bold',pb:2 }}>Get in Touch - We're Here to Hear Your Crunchy Bites Stories!"</Typography>
   </Grid>
@@ -160,7 +160,7 @@ const onSubmit = async (data) => {
   </Typography>
   </Box>
 <Box sx={{margin:'auto',display:'flex',justifyContent:'center'}}>
-<img src="/bus.png" alt="" style={{width:'66%',}}/>
+<img src="/bus.png" alt="contact crunchy bite" style={{width:'66%',}}/>
 </Box>  </Grid>
   <Grid
     item
@@ -206,11 +206,9 @@ const onSubmit = async (data) => {
        </Box>
         </Box>
         <div className="floating-whatsapp-icon">
-      <motion.a 
-      href="https://wa.me/971521746423" 
-      target="_blank" 
-        rel="noopener noreferrer" 
-        animate={{
+      <motion.a href="https://wa.me/971521746423" 
+      target="_blank" rel="noopener noreferrer" 
+      animate={{
           y: [-10, 0, -10],
           transition: { duration: 2.1, repeat: Infinity },
         }}

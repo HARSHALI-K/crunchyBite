@@ -50,6 +50,10 @@ export default function Home() {
          
         `}
     </Script>
+    <Script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-XD2RH1RHJ1"
+/>
 
   
       
