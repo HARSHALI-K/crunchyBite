@@ -24,7 +24,7 @@ const keywordsArray = [
 const keywordsString = keywordsArray.map((keyword) => keyword.key).join(", ");
 
 export const metadata: Metadata = {
-  title: "Home54 | Crunchy Bite",
+  title: "Home | Crunchy Bite",
   description: "Choose the Crunch, bite the crunch Crunchy Bite",
   keywords: keywordsString,
   icons: {

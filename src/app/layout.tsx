@@ -16,7 +16,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-  
+      <Head>
+        <meta property="og:title" content="Crunchy Bite" />
+        <meta property="og:site_name" content="Crunchy Bite" />
+        <meta property="og:url" content="https://www.crunchybite.ae" />
+        <meta property="og:description" content="" />
+        <meta property="og:type" content="product" />
+        <meta property="og:image" content="https://www.crunchybite.ae/images/CrunchyBite-logo.png" />
+      </Head>
       <body className={inter.className}>{children}</body>
     </html>
   );
