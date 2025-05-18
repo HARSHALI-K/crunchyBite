@@ -9,7 +9,6 @@ import FriedChicken from '@/app/component/pages/fried-chicken/page';
 import Paprika from '@/app/component/pages/paprika/page';
 import Shishkebab from '@/app/component/pages/shishkebab/page';
 // import NavbarBG from '../navbar-bg/page';
-//import FixedBottomNavigation from '../footer/page';
 
 import Lemon from '@/app/component/pages/lemon/page';
 import { motion } from 'framer-motion';
