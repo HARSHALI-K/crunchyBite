@@ -18,7 +18,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 
 const drawerWidth = 240;
 const navItems = [
-  { label: "Home", link: "https://www.crunchybite.ae" },
+  { label: "Home", link: "https://crunchy-bite.vercel.app" },
   { 
     label: (
       <span key="snacks">
@@ -27,19 +27,19 @@ const navItems = [
       </span>
     ), 
     subItems: [
-      { label: "Fried Chicken", link: "https://www.crunchybite.ae/?index=0" },
-      { label: "Pizza", link: "https://www.crunchybite.ae/?index=1" },
-      { label: "Barbecue", link: "https://www.crunchybite.ae/?index=2" },
-      { label: "White Cheddar", link: "https://www.crunchybite.ae/?index=3" },
-      { label: "Chilli & Lemon", link: "https://www.crunchybite.ae/?index=4" },
-      { label: "Shish Kebab", link: "https://www.crunchybite.ae/?index=5" },
-      { label: "Paprika", link: "https://www.crunchybite.ae/?index=6" },
+      { label: "Fried Chicken", link: "https://crunchy-bite.vercel.app/?index=0" },
+      { label: "Pizza", link: "https://crunchy-bite.vercel.app/?index=1" },
+      { label: "Barbecue", link: "https://crunchy-bite.vercel.app/?index=2" },
+      { label: "White Cheddar", link: "https://crunchy-bite.vercel.app/?index=3" },
+      { label: "Chilli & Lemon", link: "https://crunchy-bite.vercel.app/?index=4" },
+      { label: "Shish Kebab", link: "https://crunchy-bite.vercel.app/?index=5" },
+      { label: "Paprika", link: "https://crunchy-bite.vercel.app/?index=6" },
     ],
   },
-  { label: "About", link: "https://www.crunchybite.ae/about" },
-  { label: "Testimonial", link: "https://www.crunchybite.ae/testimonial" },
-  { label: "Blog", link: "https://www.crunchybite.ae/blog" },
-  { label: "Contact Us", link: "https://www.crunchybite.ae/contact" },
+  { label: "About", link: "https://crunchy-bite.vercel.app/about" },
+  { label: "Testimonial", link: "https://crunchy-bite.vercel.app/testimonial" },
+  { label: "Blog", link: "https://crunchy-bite.vercel.app/blog" },
+  { label: "Contact Us", link: "https://crunchy-bite.vercel.app/contact" },
 ];
 const navItemsMobile = [
   "Home",
